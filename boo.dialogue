@@ -1,0 +1,51 @@
+~ start
+if State.boo_convo_lock == 0:
+	if State.clara_secret_known == false:
+		Boo: La di da di da da!
+		- You got a nice sound, kid.
+			Godfrey: You got a nice sound, kid.
+			Boo: THANKS. I CAN DO LOUDER. LA LA LA LA LA!
+			=> end_d
+		- Would you stop that? I'm trying to ponder the world over here.
+			Godfrey: Would you stop that? I'm trying to ponder the world over here.
+			Boo: LA DI DA DI DA DA! LOO DI LA DI LOO LA!
+			=> end_d
+	elif State.clara_secret_known == true:
+		Boo: La di da di da da!
+		- You got a nice sound, kid.
+			Godfrey: You got a nice sound, kid.
+			Boo: THANKS. I CAN DO LOUDER. LA LA LA LA LA!
+			=> end_d
+		- Would you stop that? I'm trying to ponder the world over here.
+			Godfrey: Would you stop that? I'm trying to ponder the world over here.
+			Boo: LA DI DA DI DA DA! LOO DI LA DI LOO LA!
+			set State.boo_convo_lock = 3
+			set State.chain_lock3 = true
+			=> end_d
+		- (singing) You are steal-ing from your par-ents! [if State.chain_lock3 == false]
+			Godfrey: (singing) You are steal-ing from your par-ents!
+			Boo: Huh? What do you know, stranger? La la la! I am just a kid!
+			- DON'T PLAY DUMB! YOU ARE GOING TO HELP ME KILL SOMEONE. YOU ARE GOING TO HELP ME NOW.
+				Godfrey: DON'T PLAY DUMB! YOU ARE GOING TO HELP ME KILL SOMEONE. YOU ARE GOING TO HELP ME NOW.
+				Boo: Erm, I'm remembering my mom said I shouldn't talk to strangers. Bye-bye!
+				set State.boo_convo_lock = 1
+				set State.chain_lock3 = true
+				=> end_d
+			- Don't play coy with me. I am on my way to tell your parents right now. Say goodbye to that Barbie Dream House!
+				Godfrey: Don't play coy with me. I am on my way to tell your parents right now. Say goodbye to that Barbie Dream House!
+				Boo: NOOOOO. Don't tell them. I will stop stealing from them, I pinky promise. I only do it because of stupid Spike stealing from me, too!! All of the songs on his dumb punk rock label are taken from tunes I CREATE! Listen to his songs, you'll notice it!
+				set State.boo_convo_lock = 2
+				set State.boo_secret_known = true
+				=> end_d
+elif State.boo_convo_lock == 1:
+	Boo: Erm, I'm remembering my mom said I shouldn't talk to strangers. Bye-bye!
+	=> end_d
+elif State.boo_convo_lock == 2:
+	Boo: NOOOOO. Don't tell them. I will stop stealing from them, I pinky promise. I only do it because of stupid Spike stealing from me, too!! All of the songs on his dumb punk rock label are taken from tunes I CREATE! Listen to his songs, you'll notice it!
+	=> end_d
+elif State.boo_convo_lock == 3:
+	Boo: LA DI DA DI DA DA! LOO DI LA DI LOO LA!
+	=> end_d
+~ end_d
+set State.in_dialogue = false
+=> END

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://bca5vc80etgs2"
+path="res://.godot/imported/ron.dialogue-1d20d27a64cb108bd4557650ce7a5577.tres"
+
+[deps]
+
+source_file="res://ron.dialogue"
+dest_files=["res://.godot/imported/ron.dialogue-1d20d27a64cb108bd4557650ce7a5577.tres"]
+
+[params]
+
+defaults=true

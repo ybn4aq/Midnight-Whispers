@@ -1,0 +1,53 @@
+~ start
+if State.elphie_convo_lock == 0:
+	if State.bjorn_secret_known == false:
+		Elphie: Hey! Are you here for Comicon too!
+		- Yeah I am dressed as a vampire!
+			Godfrey: Yeah I am dressed as a vampire!
+			Elphie: No way! I went as that last year.
+			=> end_d
+		- Get away from me nerd!!
+			Godfrey: Get away from me nerd!!
+			Elphie: You're just jealous.
+			=> end_d
+	elif State.bjorn_secret_known == true:
+		Elphie: Hey! Are you here for Comicon too!
+		- Yeah I am dressed as a vampire!
+			Godfrey: Yeah I am dressed as a vampire!
+			Elphie: No way! I went as that last year.
+			=> end_d
+		- Get away from me nerd!!
+			Godfrey: Get away from me nerd!!
+			Elphie: You're just jealous.
+			set State.elphie_convo_lock = 2
+			set State.chain_lock2 = true
+			=> end_d
+		- I think we were destined to meet. I want to learn your spells. [if State.chain_lock2 == false]
+			Godfrey: I think we were destined to meet. I want to learn your spells.
+			Elphie: You must learn to respect them and use them only for good.
+			- Ok this is too weird. I can't keep this act up.
+				Godfrey: Ok this is too weird. I can't keep this act up.
+				Elphie: Expelliarmus!!! Get away!!
+				set State.elphie_convo_lock = 1
+				set State.chain_lock2 = true
+				=> end_d
+			- I understand. I want to learn from the master. Can we go somewhere where we can practice our magic?
+				Godfrey: I understand. I want to learn from the master. Can we go somewhere where we can practice our magic?
+				Elphie: I knew I would find someone to pass on my knowledge to! Let's go!
+				set State.game_won_elphie = true
+				set State.elphie_convo_lock = 3
+				# ^ Implement game won stuff, elphie convo lock won't be necessary then
+				=> end_d
+			
+elif State.elphie_convo_lock == 1:
+	Elphie: Expelliarmus!!! Get away!!
+	=> end_d
+elif State.elphie_convo_lock == 2:
+	Elphie: You're just jealous.
+	=> end_d
+elif State.elphie_convo_lock == 3:
+	Elphie: I knew I would find someone to pass on my knowledge to! Let's go!
+	=> end_d
+~ end_d
+set State.in_dialogue = false
+=> END

@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm1n0e6e7ewdw"]
+
+[ext_resource type="Script" uid="uid://b0iqdecjt22c" path="res://scenes/title_animation.gd" id="1_prcoc"]
+[ext_resource type="Texture2D" uid="uid://srr6jagd2hsv" path="res://assets/Midnight_Whispers_title_2.png" id="2_8mcxd"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(160.399, 163.667)
+script = ExtResource("1_prcoc")
+
+[node name="FlashingLabel" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -3.98381
+offset_top = -2.97555
+offset_right = 1020.02
+offset_bottom = 1021.02
+scale = Vector2(0.00774761, 0.00578979)
+texture = ExtResource("2_8mcxd")
+
+[node name="FlashTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true

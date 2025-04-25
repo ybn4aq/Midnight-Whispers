@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://bb0dq1ndvqx6a"
+path="res://.godot/imported/shawn.dialogue-c053a2fe3920b50f7cb53bcfca20d59b.tres"
+
+[deps]
+
+source_file="res://shawn.dialogue"
+dest_files=["res://.godot/imported/shawn.dialogue-c053a2fe3920b50f7cb53bcfca20d59b.tres"]
+
+[params]
+
+defaults=true

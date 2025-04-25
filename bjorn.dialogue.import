@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://cii04k4s8ts5r"
+path="res://.godot/imported/bjorn.dialogue-342136ceb0b97ee23928b94672cd3498.tres"
+
+[deps]
+
+source_file="res://bjorn.dialogue"
+dest_files=["res://.godot/imported/bjorn.dialogue-342136ceb0b97ee23928b94672cd3498.tres"]
+
+[params]
+
+defaults=true

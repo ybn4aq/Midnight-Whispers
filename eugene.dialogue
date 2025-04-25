@@ -1,0 +1,51 @@
+~ start
+if State.eugene_convo_lock == 0:
+	if State.franklin_secret_known == false:
+		Eugene: Hey kiddo, are you looking for my autograph?
+		- Sure man why not. I loved your work Puss in Boots\: The Last Wish.
+			Godfrey: Sure man why not. I loved your work Puss in Boots: The Last Wish.
+			Eugene: Thank you!! It is inspired by my last wife.
+			=> end_d
+		-  No, why would I want that? I think you're caretaker is looking for you.
+			Godfrey: No, why would I want that? I think you're caretaker is looking for you.
+			Eugene: I only talk to real fans.
+			=> end_d
+	elif State.franklin_secret_known == true:
+		Eugene: Hey kiddo, are you looking for my autograph?
+		-  Sure man why not. I loved your work Puss in Boots\: The Last Wish.
+			Godfrey: Sure man why not. I loved your work Puss in Boots: The Last Wish.
+			Eugene: Thank you!! It is inspired by my last wife.
+			=> end_d
+		- No, why would I want that? I think you're caretaker is looking for you.
+			Godfrey: No, why would I want that? I think you're caretaker is looking for you.
+			Eugene: I only talk to real fans. Bugger off.
+			set State.eugene_convo_lock = 3
+			set State.chain_lock2 = true
+			=> end_d
+		- Hey man, how many movies are inspired by your wives? You couldn't have cheated that many times. [if State.chain_lock2 == false]
+			Godfrey: Hey man, how many movies are inspired by your wives? You couldn't have cheated that many times.
+			Eugene: Oh no are you one of my ex-wives?? I'm sorry hunny I didn't recognize you with how pale you look, do you need to see the doctor?
+			- Never in my lifetimes would I marry you.
+				Godfrey: Never in my lifetimes would I marry you.
+				Eugene: Hey, not yet, I could try to change your mind.
+				set State.eugene_convo_lock = 1
+				set State.chain_lock2 = true
+				=> end_d
+			- No, I'm good, but that is nice of you to offer.
+				Godfrey: No, I'm good, but that is nice of you to offer.
+				Eugene: Of course, I try to look out for those I made a "commitment" to, unlike Charles over here. I'll let my biggest fan in on a secret. Charles did not actually go to war, he just needed the time to retake Organic chemistry to get into med school with a better gpa.
+				set State.eugene_convo_lock = 2
+				set State.eugene_secret_known = true
+				=> end_d
+elif State.eugene_convo_lock == 1:
+	Eugene:Hey, not yet, I could try to change your mind.
+	=> end_d
+elif State.eugene_convo_lock == 2:
+	Eugene: Of course, I try to look out for those I made a "commitment" to, unlike Charles over here. I'll let my biggest fan in on a secret. Charles did not actually go to war, he just needed the time to retake Organic chemistry to get into med school with a better gpa.
+	=> end_d
+elif State.eugene_convo_lock == 3:
+	Eugene: I only talk to real fans. Bugger off.
+	=> end_d
+~ end_d
+set State.in_dialogue = false
+=> END

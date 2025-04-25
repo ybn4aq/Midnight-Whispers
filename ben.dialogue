@@ -1,0 +1,53 @@
+~ start
+
+if State.ben_convo_lock == 0:
+	if State.rachel_secret_known == false:
+		Ben: Hey man! Just finished playing Castlevania for five hours. Thought I'd get some fresh air.
+		- Castlevania? Vampires are scary. Why would you play that game?
+			Godfrey: Castlevania? Vampires are scary. Why would you play that game?
+			Ben: Vampires are cool! And if you don't think they're cool then you are a wimp!
+			=> end_d
+		- I love that series. Which installment are you playing?
+			Godfrey: I love that series. Which installment are you playing?
+			Ben: Symphony of the Night. I just saw Richter in the colosseum. Can't wait to get back to it!
+			=> end_d
+	elif State.rachel_secret_known == true:
+		Ben: Hey man! Just finished playing Castlevania for five hours. Thought I'd get some fresh air.
+		- Castlevania? Vampires are scary. Why would you play that game?
+			Godfrey: Castlevania? Vampires are scary. Why would you play that game?
+			Ben: Vampires are cool! And if you don't think they're cool then you are a wimp!
+			set State.ben_convo_lock = 3
+			set State.chain_lock1 = true
+			=> end_d
+		- I love that series. Which installment are you playing?
+			Godfrey: I love that series. Which installment are you playing?
+			Ben: Symphony of the Night. I just saw Richter in the colosseum. Can't wait to get back to it!
+			=> end_d
+		- I think we both know, you aren't just a gamer. You're using your software knowledge for evil purposes. [if State.chain_lock1 == false]
+			Godfrey: I think we both know, you aren't just a gamer. You're using your software knowledge for evil purposes.
+			Ben: Huh? I have no idea of what you are referring. I just watch Twitch and play video games, that's all.
+			- I bet you have no friends at school and nobody likes you. You probably make the teachers angry too. I know people like you.
+				Godfrey: I bet you have no friends at school and nobody likes you. You probably make the teachers angry too. I know people like you.
+				Ben: That is not true! I hang with the SNES club after school every day! You're just a meanie.
+				set State.ben_convo_lock = 1
+				set State.chain_lock1 = true
+				=> end_d
+			- That is NOT all. I know you hacked into the school's network. I know you know a lot about people in this town. And you're going to tell me something I want to know.
+				Godfrey: That is NOT all. I know you hacked into the school's network. I know you know a lot about people in this town. And you're going to tell me something I want to know..
+				Ben: Okay, okay. This is none of my business, but Julie is...crazy. She has been researching how to "socially ruin" someone. She's always had a crush on Sean. But everyone knows Rachel and Sean are an item. I don't care to know what Julie's plans are.
+				set State.ben_convo_lock = 2
+				set State.ben_secret_known = true
+				=> end_d
+elif State.ben_convo_lock == 1:
+	Ben: That is not true! I hang with the SNES club after school every day! You're just a meanie.
+	=> end_d
+elif State.ben_convo_lock == 2:
+	Ben: Okay, okay. This is none of my business, but Julie is...crazy. She has been researching how to "socially ruin" someone. She's always had a crush on Sean. But everyone knows Rachel and Sean are an item. I don't care to know what Julie's plans are.
+	=> end_d
+elif State.ben_convo_lock == 3:
+	Ben: Vampires are cool! And if you don't think they're cool then you are a wimp!
+	=> end_d
+
+~ end_d
+set State.in_dialogue = false
+=> END

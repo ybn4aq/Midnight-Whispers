@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://ryux7kbtfgyq"
+path="res://.godot/imported/franklin.dialogue-cfd46c7405917faf7b7271410207256e.tres"
+
+[deps]
+
+source_file="res://franklin.dialogue"
+dest_files=["res://.godot/imported/franklin.dialogue-cfd46c7405917faf7b7271410207256e.tres"]
+
+[params]
+
+defaults=true

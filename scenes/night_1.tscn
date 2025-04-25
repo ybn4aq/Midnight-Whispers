@@ -1,0 +1,91 @@
+[gd_scene load_steps=22 format=3 uid="uid://ceo8qymlsfca8"]
+
+[ext_resource type="PackedScene" uid="uid://bwtpblhwuhvx8" path="res://scenes/layer_holder.tscn" id="1_p67yn"]
+[ext_resource type="PackedScene" uid="uid://k041yduoeomj" path="res://scenes/sean.tscn" id="2_y8stc"]
+[ext_resource type="PackedScene" uid="uid://c5ynwievrvbqp" path="res://scenes/player.tscn" id="4_y8stc"]
+[ext_resource type="PackedScene" uid="uid://bob6angxiqbfa" path="res://scenes/Shawn.tscn" id="5_y8stc"]
+[ext_resource type="PackedScene" uid="uid://dxbrj7hhg4y75" path="res://scenes/Franklin.tscn" id="6_mlt3j"]
+[ext_resource type="AudioStream" uid="uid://bupffpbttvbur" path="res://assets/Kitty Horrorshow - Tenement - Music 3.mp3" id="7_536d7"]
+[ext_resource type="PackedScene" uid="uid://bb3tlyy0aewvh" path="res://scenes/Ron.tscn" id="7_jdti6"]
+[ext_resource type="PackedScene" uid="uid://d4nq36px6ku10" path="res://scenes/spike.tscn" id="8_7tdkk"]
+[ext_resource type="PackedScene" uid="uid://ldncapne0gc" path="res://scenes/all_sprites.tscn" id="9_1vrt8"]
+[ext_resource type="PackedScene" uid="uid://cfxsy8feeuurg" path="res://scenes/oogle.tscn" id="9_tnist"]
+[ext_resource type="PackedScene" uid="uid://4cj5bihnkupk" path="res://scenes/greg.tscn" id="10_dh8ui"]
+[ext_resource type="PackedScene" uid="uid://chppd4c0fh22p" path="res://scenes/Eugene.tscn" id="11_6roi8"]
+[ext_resource type="PackedScene" uid="uid://biovlgdo21oqk" path="res://scenes/charles.tscn" id="12_xtia3"]
+[ext_resource type="PackedScene" uid="uid://mk4olpwnhphn" path="res://scenes/Boo.tscn" id="13_4ryj4"]
+[ext_resource type="PackedScene" uid="uid://clr67ckb8cnwa" path="res://scenes/ben.tscn" id="14_dpe5q"]
+[ext_resource type="PackedScene" uid="uid://dnue8uqvae4ay" path="res://scenes/Clara.tscn" id="15_jjmoh"]
+[ext_resource type="PackedScene" uid="uid://dhbncy2gb2cc4" path="res://scenes/jean.tscn" id="16_dpe5q"]
+[ext_resource type="PackedScene" uid="uid://bisj71cr86s0c" path="res://scenes/julie.tscn" id="16_hcyko"]
+[ext_resource type="PackedScene" uid="uid://dktcndjo7dckm" path="res://scenes/bjorn.tscn" id="17_jjmoh"]
+[ext_resource type="PackedScene" uid="uid://1pul27v8xqxu" path="res://scenes/elphie.tscn" id="18_hcyko"]
+[ext_resource type="PackedScene" uid="uid://bjipvswnnpgf8" path="res://scenes/Rachel.tscn" id="19_o5hes"]
+
+[node name="Night 1" type="Node2D"]
+
+[node name="All Sprites" parent="." instance=ExtResource("9_1vrt8")]
+position = Vector2(1232, 1208)
+
+[node name="Layer_holder" parent="." instance=ExtResource("1_p67yn")]
+
+[node name="Player" parent="." instance=ExtResource("4_y8stc")]
+unique_name_in_owner = true
+position = Vector2(-6, -27)
+
+[node name="Background Music" type="AudioStreamPlayer2D" parent="Player"]
+position = Vector2(19, 6)
+stream = ExtResource("7_536d7")
+autoplay = true
+parameters/looping = true
+
+[node name="Sean" parent="." instance=ExtResource("2_y8stc")]
+position = Vector2(-21, 81)
+
+[node name="Shawn" parent="." instance=ExtResource("5_y8stc")]
+position = Vector2(20, 77)
+
+[node name="Franklin" parent="." instance=ExtResource("6_mlt3j")]
+position = Vector2(-611, 72)
+
+[node name="Ron" parent="." instance=ExtResource("7_jdti6")]
+position = Vector2(801, 73)
+
+[node name="Spike" parent="." instance=ExtResource("8_7tdkk")]
+position = Vector2(-288, 59)
+
+[node name="Oogle" parent="." instance=ExtResource("9_tnist")]
+position = Vector2(-305, -241)
+
+[node name="Greg" parent="." instance=ExtResource("10_dh8ui")]
+position = Vector2(1299, 714)
+
+[node name="Eugene" parent="." instance=ExtResource("11_6roi8")]
+position = Vector2(1345, -213)
+
+[node name="Charles" parent="." instance=ExtResource("12_xtia3")]
+position = Vector2(1342, -255)
+
+[node name="Boo" parent="." instance=ExtResource("13_4ryj4")]
+position = Vector2(-749, -238)
+
+[node name="Ben" parent="." instance=ExtResource("14_dpe5q")]
+position = Vector2(-980, 174)
+
+[node name="Jean" parent="." instance=ExtResource("16_dpe5q")]
+position = Vector2(1302, 146)
+
+[node name="Bjorn" parent="." instance=ExtResource("17_jjmoh")]
+position = Vector2(1150, 436)
+
+[node name="Elphie" parent="." instance=ExtResource("18_hcyko")]
+position = Vector2(-844, -89)
+
+[node name="Rachel" parent="." instance=ExtResource("19_o5hes")]
+position = Vector2(1300, -59)
+
+[node name="Clara" parent="." instance=ExtResource("15_jjmoh")]
+position = Vector2(-12, -388)
+
+[node name="Julie" parent="." instance=ExtResource("16_hcyko")]
+position = Vector2(307, 229)

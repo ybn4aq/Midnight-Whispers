@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://d0o1cmbirmwbc"
+path="res://.godot/imported/jean.dialogue-c0ea1c8bfa9393a309c39d198b97007b.tres"
+
+[deps]
+
+source_file="res://jean.dialogue"
+dest_files=["res://.godot/imported/jean.dialogue-c0ea1c8bfa9393a309c39d198b97007b.tres"]
+
+[params]
+
+defaults=true

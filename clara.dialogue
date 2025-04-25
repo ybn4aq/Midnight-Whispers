@@ -1,0 +1,41 @@
+~ start
+if State.clara_convo_lock == 0:
+	Clara: Hey hunny! Everything okay with you?
+	- No, to be honest. I am a vampire. And I am hungry. For your blood.
+		Godfrey: No, to be honest. I am a vampire. And I am hungry. For your blood.
+		Clara: Aaaah! What the hell? Get away you creep!
+		set State.clara_convo_lock = 1
+		set State.chain_lock3 = true
+		=> end_d
+		
+	- Yeah, all good. Just learning my way around the town.
+		Godfrey: Yeah, all good. Just learning my way around the town.
+		Clara: Oh, you're new around here? I can help you hunny.
+		- That's very nice of you, but I am okay. Just meeting people as I go.
+			Godfrey: That's very nice of you, but I am okay. Just meeting people as I go.
+			Clara: Alright sweetie, you just holler if you need me. You know, you seem like a good kid. Unlike that Boo. She steals from her parents and they don't have a clue. Can't imagine if any of my boys were like that.
+			set State.clara_convo_lock = 3
+			set State.clara_secret_known = true
+			=> end_d
+		
+		- That would be great. Could you show me where I can suck someone's blood?
+			Godfrey: That would be great. Could you show me where I can suck someone's blood?
+			Clara: Aaaah! What the hell? Get away you creep!
+			set State.clara_convo_lock = 2
+			set State.chain_lock3 = true
+			=> end_d
+elif State.clara_convo_lock == 1:
+	Clara: Aaaah! What the hell? Get away you creep!
+	=> end_d
+elif State.clara_convo_lock == 2:
+	Clara: Aaaah! What the hell? Get away you creep!
+	=> end_d
+elif State.clara_convo_lock == 3:
+	Clara: Alright sweetie, you just holler if you need me. You know, you seem like a good kid. Unlike that Boo. She steals from her parents and they don't have a clue. Can't imagine if any of my boys were like that.
+	=> end_d
+
+	
+~ end_d
+set State.in_dialogue = false
+=> END
+

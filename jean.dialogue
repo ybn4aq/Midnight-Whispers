@@ -1,0 +1,17 @@
+~ start
+
+Jean: Quick! Red or Black? I'm gambling on my phone!
+- Red!
+	Godfrey: Red!
+	Jean: Aw man it was black, and I bet my house on it. Hmm do you wanna play blackjack?
+	=> end_d
+		
+- Black!
+	Godfrey: Black!
+	Jean: WOOO!! Want to go again?
+	=> end_d
+
+~ end_d
+set State.in_dialogue = false
+=> END
+

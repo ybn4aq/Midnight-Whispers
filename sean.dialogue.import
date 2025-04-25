@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://evlj4p3mpnqi"
+path="res://.godot/imported/sean.dialogue-b7e9165bbe39fba952e831c9d5a9543e.tres"
+
+[deps]
+
+source_file="res://sean.dialogue"
+dest_files=["res://.godot/imported/sean.dialogue-b7e9165bbe39fba952e831c9d5a9543e.tres"]
+
+[params]
+
+defaults=true

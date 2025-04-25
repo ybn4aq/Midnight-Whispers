@@ -1,0 +1,53 @@
+~ start
+
+if State.greg_convo_lock == 0:
+	if State.spike_secret_known == false:
+		Greg: Grah. My back hurts. Too many trees to chop.
+		- If a tree falls in the forest...
+			Godfrey: If a tree falls in the forest...
+			Greg: Gruh. It makes a sound. Dumb question. I don't talk to dumb people.
+			=> end_d
+		- Why don't you take a break and enjoy a cold refreshing Coca-Cola?
+			Godfrey: Why don't you take a break and enjoy a cold refreshing Coca-Cola?
+			Greg: Huh. Are you in an advertisement or something.  .........If you actually have one I'll take it.
+			=> end_d
+	elif State.spike_secret_known == true:
+		Greg: Grah. My back hurts. Too many trees to chop.
+		- If a tree falls in the forest...
+			Godfrey: If a tree falls in the forest...
+			Greg: Gruh. It makes a sound. Dumb question. I don't talk to dumb people.
+			set State.greg_convo_lock = 3
+			set State.chain_lock3 = true
+			=> end_d
+		- Why don't you take a break and enjoy a cold refreshing Coca-Cola?
+			Godfrey: Why don't you take a break and enjoy a cold refreshing Coca-Cola?
+			Greg: Huh. Are you in an advertisement or something.  .........If you actually have one I'll take it.
+			=> end_d
+		- Sorry about your little guy. Not everybody is born with the whole package. [if State.chain_lock3 == false]
+			Godfrey: Sorry about your little guy. Not everybody is born with the whole package.
+			Greg: Grah. F-ck you. Who talked to you. Did Spike tell you that.
+			- Yes, Spike told me. And he told me that this whole manly man thing is just an act.
+				Godfrey: Yes, Spike told me. And he told me that this whole manly man thing is just an act.
+				Greg: Alright man, you're right! I have to keep this image so that people respect me and girls will like me. I honestly just want to leave this town. I mean, even that kid Shawn is getting out of this shithole. And he's going to do it without telling a soul. That's my dream way to go: Irish exit!
+				set State.greg_convo_lock = 2
+				set State.greg_secret_known = true
+				=> end_d
+			- I just guessed it myself. Sometimes you can just tell with that kinda thing. I will kill you now, Greg.
+				Godfrey: I just guessed it myself. Sometimes you can just tell with that kinda thing. I will kill you now, Greg.
+				Greg: Ha. You talk a big game. I will beat you senseless if you keep talking.
+				set State.greg_convo_lock = 1
+				set State.chain_lock3 = true
+				=> end_d
+elif State.greg_convo_lock == 1:
+	Greg: Ha. You talk a big game. I will beat you senseless if you keep talking.
+	=> end_d
+elif State.greg_convo_lock == 2:
+	Greg: Alright man, you're right! I have to keep this image so that people respect me and girls will like me. I honestly just want to leave this town. I mean, even that kid Shawn is getting out of this shithole. And he's going to do it without telling a soul. That's my dream way to go: Irish exit!
+	=> end_d
+elif State.greg_convo_lock == 3:
+	Greg: Gruh. It makes a sound. Dumb question. I don't talk to dumb people.
+
+~ end_d
+set State.in_dialogue = false
+=> END
+

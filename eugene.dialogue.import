@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://camn6tegyi4mh"
+path="res://.godot/imported/eugene.dialogue-5ec486d621a22245170ffeb988aae8db.tres"
+
+[deps]
+
+source_file="res://eugene.dialogue"
+dest_files=["res://.godot/imported/eugene.dialogue-5ec486d621a22245170ffeb988aae8db.tres"]
+
+[params]
+
+defaults=true

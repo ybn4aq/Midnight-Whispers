@@ -1,0 +1,53 @@
+~ start
+
+if State.rachel_convo_lock == 0:
+	if State.sean_secret_known == false:
+		Rachel: Oh heyyyyy. What do you think of my new dress? I like the flowers.
+		- Uh, yeah, it's nice. Definitely matches your vibe.
+			Godfrey: Uh, yeah, it's nice. Definitely matches your vibe.
+			Rachel: Thanks, I like it too! I like the flowers. Oops, I guess I said that already.
+			=> end_d
+		- It's nice...if you like looking stupid. Flowers? How old are you!?
+			Godfrey: It's nice...if you like looking stupid. Flowers? How old are you!?
+			Rachel: All the boys at school like my fits. You're one of those weird kids.
+			=> end_d
+	elif State.sean_secret_known == true:
+		Rachel: Oh heyyyyy. What do you think of my new dress? I like the flowers.
+		- Uh, yeah, it's nice. Definitely matches your vibe.
+			Godfrey: Uh, yeah, it's nice. Definitely matches your vibe.
+			Rachel: Thanks, I like it too! I like the flowers. Oops, I guess I said that already.
+			=> end_d
+		- It's nice...if you like looking stupid. Flowers? How old are you!?
+			Godfrey: It's nice...if you like looking stupid. Flowers? How old are you!?
+			Rachel: All the boys at school like my fits. You're one of those weird kids.
+			set State.rachel_convo_lock = 3
+			set State.chain_lock1 = true
+			=> end_d
+		- It's nice. Is that the dress you wear when you drive illegally? [if State.chain_lock1 == false]
+			Godfrey: It's nice. Is that the dress you wear when you drive illegally?
+			Rachel: What? How do you know that? Please don't tell my mom, she'll literally kill me.
+			- I won't tell a soul. As long as you tell me something that YOU have never told a soul.
+				Godfrey: I won't tell a soul. As long as you tell me something that YOU have never told a soul.
+				Rachel: Fiiine. Ben, that blonde nerd from school, he like totally hacked into the system and looked at everybody's search histories. He knows like so much. Now leave me alone.
+				set State.rachel_convo_lock = 2
+				set State.rachel_secret_known = true
+				=> end_d
+			- I'm going to tell everybody in this town. And then I am going to drink your blood.
+				Godfrey: I'm going to tell everybody in this town. And then I am going to drink your blood.
+				Rachel: Ew, whaaat? Super kinky. I am like totally not into that.
+				set State.rachel_convo_lock = 1
+				set State.chain_lock1 = true
+				=> end_d
+elif State.rachel_convo_lock == 1:
+	Rachel: Ew, whaaat? Super kinky. I am like totally not into that.
+	=> end_d
+elif State.rachel_convo_lock == 2:
+	Rachel: Fiiine. Ben, that blonde nerd from school, he like totally hacked into the system and looked at everybody's search histories. He knows like so much. Now leave me alone.
+	=> end_d
+elif State.rachel_convo_lock == 3:
+	Rachel: All the boys at school like my fits. You're one of those weird kids.
+
+~ end_d
+set State.in_dialogue = false
+=> END
+

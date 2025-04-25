@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://nxqob3uyll2p"
+path="res://.godot/imported/ben.dialogue-12b2b1eddeeff426c62b36260b644d6f.tres"
+
+[deps]
+
+source_file="res://ben.dialogue"
+dest_files=["res://.godot/imported/ben.dialogue-12b2b1eddeeff426c62b36260b644d6f.tres"]
+
+[params]
+
+defaults=true

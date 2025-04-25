@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://dpfqdtnkudslq"
+path="res://.godot/imported/elphie.dialogue-5acf285226b55ec0f8f4f09317b196b9.tres"
+
+[deps]
+
+source_file="res://elphie.dialogue"
+dest_files=["res://.godot/imported/elphie.dialogue-5acf285226b55ec0f8f4f09317b196b9.tres"]
+
+[params]
+
+defaults=true

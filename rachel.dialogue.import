@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://bgkudt7s7yesk"
+path="res://.godot/imported/rachel.dialogue-3bd0afefd640f6b247c71dbb3f8cb574.tres"
+
+[deps]
+
+source_file="res://rachel.dialogue"
+dest_files=["res://.godot/imported/rachel.dialogue-3bd0afefd640f6b247c71dbb3f8cb574.tres"]
+
+[params]
+
+defaults=true

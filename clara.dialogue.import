@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://ulxmkshr01j5"
+path="res://.godot/imported/clara.dialogue-a2eba67ce5ed31457d797cf454d1500c.tres"
+
+[deps]
+
+source_file="res://clara.dialogue"
+dest_files=["res://.godot/imported/clara.dialogue-a2eba67ce5ed31457d797cf454d1500c.tres"]
+
+[params]
+
+defaults=true

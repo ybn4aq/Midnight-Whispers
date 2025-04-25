@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://i26f0w5tewfg"
+path="res://.godot/imported/oogle.dialogue-6486066388be9c8c227769c5afebc4b4.tres"
+
+[deps]
+
+source_file="res://oogle.dialogue"
+dest_files=["res://.godot/imported/oogle.dialogue-6486066388be9c8c227769c5afebc4b4.tres"]
+
+[params]
+
+defaults=true

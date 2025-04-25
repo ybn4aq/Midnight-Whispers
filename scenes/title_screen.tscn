@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlsfnopbxo2p7"]
+
+[ext_resource type="Script" uid="uid://b5fjhyxhitsad" path="res://title_screen.gd" id="1_fgkus"]
+[ext_resource type="Texture2D" uid="uid://srr6jagd2hsv" path="res://assets/Midnight_Whispers_title_2.png" id="2_sa3yf"]
+
+[node name="Title Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fgkus")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 1024.0
+texture = ExtResource("2_sa3yf")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 802.0
+offset_right = 409.0
+offset_bottom = 892.0
+text = "BEGIN"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

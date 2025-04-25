@@ -1,0 +1,17 @@
+~ start
+
+Oogle: This town so different than my cruise's last stop in Punta Cana!
+- What sort of cruise line stops here?? Carnival??
+	Godfrey: What sort of cruise line stops here?? Carnival??
+	Oogle: Hey!!! I'm having the best Spring Break of my life!!
+	=> end_d
+		
+- You look so tan!!
+	Godfrey: You look so tan!!
+	Oogle: Thank you!! You have a lovely pale glow.
+	=> end_d
+
+~ end_d
+set State.in_dialogue = false
+=> END
+

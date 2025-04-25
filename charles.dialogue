@@ -1,0 +1,51 @@
+~ start
+if State.charles_convo_lock == 0:
+	if State.eugene_secret_known == false:
+		Charles: How do you do? Isn't it a lovely evening for a stroll.
+		-  No?? It's so dark outside!
+			Godfrey: No?? It's so dark outside!
+			Charles: Tsk Tsk. Young people need to learn manners.
+			=> end_d
+		- It is! It's such perfect weather to be outside.
+			Godfrey: It is! It's such perfect weather to be outside.
+			Charles: Enjoy your night, I'll be strolling along!
+			=> end_d
+	elif State.eugene_secret_known == true:
+		Charles: How do you do? Isn't it a lovely evening for a stroll.
+		-  No?? It's so dark outside!
+			Godfrey: No?? It's so dark outside!
+			Charles: Tsk Tsk. Young people need to learn manners.
+			set State.charles_convo_lock = 3
+			set State.chain_lock2 = true
+			=> end_d
+		- It is! It's such perfect weather to be outside.
+			Godfrey: It is! It's such perfect weather to be outside.
+			Charles: Enjoy your night, I'll be strolling along!
+			=> end_d
+		- You couldn't even remember Markovnikov's Rule for one semester?? [if State.chain_lock2 == false]
+			Godfrey: You couldn't even remember Markovnikov's Rule for one semester??
+			Charles: Gosh, Eugene has the biggest mouth. Look, I'm not proud of it, but I could not be where I am without the time for a third try at the class.
+			- That is crazy, I know where I'm not going for my yearly checkup now.
+				Godfrey: That is crazy, I know where I'm not going for my yearly checkup now.
+				Charles: Scram! I'll be just fine without you.
+				set State.charles_convo_lock = 1
+				set State.chain_lock2 = true
+				=> end_d
+			- That is crazy, but I understand. Just get a tutor next time sir.
+				Godfrey: That is crazy, but I understand. Just get a tutor next time sir.
+				Charles: Hey, at least I don't think we're in Greenland like... oh wait no I shouldn't say it. But it's too funny... Bjorn thinks his ship finally made it to Greenland, but it actually crashed here along the way. Who would think this place is Greenland?? Nothing is green here, its all purple.
+				set State.charles_convo_lock = 2
+				set State.charles_secret_known = true
+				=> end_d
+elif State.charles_convo_lock == 1:
+	Charles: Scram! I'll be just fine without you.
+	=> end_d
+elif State.charles_convo_lock == 2:
+	Charles: Hey, at least I don't think we're in Greenland like... oh wait no I shouldn't say it. But it's too funny... Bjorn thinks his ship finally made it to Greenland, but it actually crashed here along the way. Who would think this place is Greenland?? Nothing is green here, its all purple.
+	=> end_d
+elif State.charles_convo_lock == 3:
+	Charles: Tsk Tsk. Young people need to learn manners.
+	=> end_d
+~ end_d
+set State.in_dialogue = false
+=> END

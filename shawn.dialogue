@@ -1,0 +1,53 @@
+~ start
+if State.shawn_convo_lock == 0:
+	if State.greg_secret_known == false:
+		Shawn: Bucket druuuum, bucket druuuum! I love playing the bucket drums!
+		- You're killing it son!! You've got that Ringo Starr way about you!
+			Godfrey: You're killing it son!! You've got that Ringo Starr way about you!
+			Shawn: Thanks, man, he's my idol, you made my day!
+			=> end_d
+		- Shuuuut up, shuuuut up! You sound bad so shut up!
+			Godfrey: Shuuuut up, shuuuut up! You sound bad so shut up!
+			Shawn: Aw. That wasn't very nice. Feelings, hurt.
+			=> end_d
+	elif State.greg_secret_known == true:
+		Shawn: Bucket druuuum, bucket druuuum! I love playing the bucket drums!
+		- You're killing it son!! You've got that Ringo Starr way about you!
+			Godfrey: You're killing it son!! You've got that Ringo Starr way about you!
+			Shawn: Thanks, man, he's my idol, you made my day!
+			=> end_d
+		- Shuuuut up, shuuuut up! You sound bad so shut up!
+			Godfrey: Shuuuut up, shuuuut up! You sound bad so shut up!
+			Shawn: Aw. That wasn't very nice. Feelings, hurt.
+			set State.shawn_convo_lock = 2
+			set State.chain_lock3 = true
+			=> end_d
+		- So just like that, you're going to leave town? Without even telling your twin brother? That is seriously messed up. [if State.chain_lock3 == false]
+			Godfrey: So just like that, you're going to leave town? Without even telling your twin brother? That is seriously messed up.
+			Shawn: What? How did you hear that? And shush up! Sean is right there! We can't talk about this here.
+			- You're evil. More evil than me. And I am the vampire.
+				Godfrey: You're evil. More evil than me. And I am the vampire.
+				Shawn: Vam-? Vampire? Wh-? What?? Aaaaaah! I knew there was something off about you!!
+				set State.shawn_convo_lock = 1
+				set State.chain_lock3 = true
+				=> end_d
+			- Fine. You want to talk somewhere private? So I can hear all about your big plans and the way you are going to betray your family? Let's do it.
+				Godfrey: Fine. You want to talk somewhere private? So I can hear all about your big plans and the way you are going to betray your family? Let's do it.
+				Shawn: Alright, man, alright. But let me tell you this first, I am doing this FOR my family. I want to become successful as a drummer to support them and make them proud. They will understand, once I'm gone. Now let's go. I don't want Sean to hear us.
+				set State.game_won_shawn = true
+				set State.shawn_convo_lock = 3
+				# ^ Implement game won stuff, shawn convo lock won't be necessary then
+				=> end_d
+			
+elif State.shawn_convo_lock == 1:
+	Shawn: Vam-? Vampire? Wh-? What?? Aaaaaah! I knew there was something off about you!!
+	=> end_d
+elif State.shawn_convo_lock == 2:
+	Shawn: Aw. That wasn't very nice. Feelings, hurt.
+	=> end_d
+elif State.shawn_convo_lock == 3:
+	Shawn: Alright, man, alright. But let me tell you this first, I am doing this FOR my family. I want to become successful as a drummer to support them and make them proud. They will understand, once I'm gone. Now let's go. I don't want Sean to hear us.
+	=> end_d
+~ end_d
+set State.in_dialogue = false
+=> END

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://chh5dit63sdm"
+path="res://.godot/imported/julie.dialogue-a0dadc5889265342614223afd1842842.tres"
+
+[deps]
+
+source_file="res://julie.dialogue"
+dest_files=["res://.godot/imported/julie.dialogue-a0dadc5889265342614223afd1842842.tres"]
+
+[params]
+
+defaults=true

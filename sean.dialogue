@@ -1,0 +1,42 @@
+~ start
+
+if State.sean_convo_lock == 0:
+	Sean: How about that sweet sound, huh? Me and my brother Shawn love playing together.
+	- Yeah, I can tell you two are kids. You sound like it.
+		Godfrey: Yeah, I can tell you two are kids. You sound like it.
+		Sean: Heck off man! We have fun playing together.
+		set State.sean_convo_lock = 1
+		set State.chain_lock1 = true
+		=> end_d
+		
+	- Wow, you guys sound like the real deal! How'd you guys end up on the street?
+		Godfrey: Wow, you guys sound like the real deal! How'd you guys end up on the street?
+		Sean: Our car broke down, so our friend Rachel drove us in.  It was kind of sketchy though...
+		- Sketchy? How so?
+			Godfrey: Sketchy? How so?
+			Sean: Well, I shouldn't tell you this, but Rachel doesn't really have her license. She kept failing the exam so she just drives her car now illegally...
+			set State.sean_convo_lock = 3
+			set State.sean_secret_known = true
+			=> end_d
+		
+		- OMG! Car broke down. Sucks to suck. That's gonna be so expensive to fix. Lol!
+			Godfrey: OMG! Car broke down. Sucks to suck. That's gonna be so expensive to fix. Lol!
+			Sean: Screw you man! I am going to have to play all night just to make money to fix it.
+			set State.sean_convo_lock = 2
+			set State.sean_lock1 = true
+			=> end_d
+elif State.sean_convo_lock == 1:
+	Sean: Heck off man! We have fun playing together.
+	=> end_d
+elif State.sean_convo_lock == 2:
+	Sean: Screw you man! I am going to have to play all night just to make money to fix it.
+	=> end_d
+elif State.sean_convo_lock == 3:
+	Sean: Well, I shouldn't tell you this, but Rachel doesn't really have her license. She kept failing the exam so she just drives her car now illegally...
+	=> end_d
+
+	
+~ end_d
+set State.in_dialogue = false
+=> END
+

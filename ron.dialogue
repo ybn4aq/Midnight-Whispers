@@ -1,0 +1,53 @@
+~ start
+if State.ron_convo_lock == 0:
+	if State.julie_secret_known == false:
+		Ron: I'm just having the best day ever! Life is so great!
+		- I totally agree! How lucky are we to be alive?
+			Godfrey: I totally agree! How lucky are we to be alive?
+			Ron: The luckiest! Like Pitbull said: "Every day above ground is a great day!"
+			=> end_d
+		- Your enthusiasm is intoxicating. Chill out.
+			Godfrey: Your enthusiasm is intoxicating. Chill out.
+			Ron: You can't bring me down! I am on top of the world!
+			=> end_d
+	elif State.julie_secret_known == true:
+		Ron: I'm just having the best day ever! Life is so great!
+		- I totally agree! How lucky are we to be alive?
+			Godfrey: I totally agree! How lucky are we to be alive?
+			Ron: The luckiest! Like Pitbull said: "Every day above ground is a great day!"
+			=> end_d
+		- Your enthusiasm is intoxicating. Chill out.
+			Godfrey: Your enthusiasm is intoxicating. Chill out.
+			Ron: You can't bring me down! I am on top of the world!
+			set State.ron_convo_lock = 2
+			set State.chain_lock1 = true
+			=> end_d
+		- Ron, cut the act. I know you're very lonely. It's okay to be lonely. [if State.chain_lock1 == false]
+			Godfrey: Ron, cut the act. I know you're very lonely. It's okay to be lonely.
+			Ron: ......you really think so? I just don't have any friends. Would you maybe...be my friend?
+			- Friend? HAHAH. I wouldn't dream of being your friend. I just want to drink your blood.
+				Godfrey: Friend? HAHAH. I wouldn't dream of being your friend. I just want to drink your blood.
+				Ron: Wh-? What? My mom told me about people like you. Get away from me!!
+				set State.ron_convo_lock = 1
+				set State.chain_lock1 = true
+				=> end_d
+			- Yes, Ron. I will be your friend. Want to come with me now? I have this really cool hang out spot for just the two of us.
+				Godfrey: Yes, Ron. I will be your friend. Want to come with me now? I have this really cool hang out spot for just the two of us.
+				Ron: Yeah! That sounds fun. Yay! My first "hang out". I'm going to be like all the other kids!
+				set State.game_won_ron = true
+				set State.ron_convo_lock = 3
+				# ^ Implement game won stuff, ron convo lock won't be necessary then
+				=> end_d
+			
+elif State.ron_convo_lock == 1:
+	Ron: Wh-? What? My mom told me about people like you. Get away from me!!
+	=> end_d
+elif State.ron_convo_lock == 2:
+	Ron: You can't bring me down! I am on top of the world!
+	=> end_d
+elif State.ron_convo_lock == 3:
+	Ron: Yeah! That sounds fun. Yay! My first "hang out". I'm going to be like all the other kids!
+	=> end_d
+~ end_d
+set State.in_dialogue = false
+=> END

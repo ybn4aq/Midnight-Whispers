@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://dpcqg2cgo4hdm"
+path="res://.godot/imported/greg.dialogue-7bad7158f90cb1c807a896473df3806d.tres"
+
+[deps]
+
+source_file="res://greg.dialogue"
+dest_files=["res://.godot/imported/greg.dialogue-7bad7158f90cb1c807a896473df3806d.tres"]
+
+[params]
+
+defaults=true
