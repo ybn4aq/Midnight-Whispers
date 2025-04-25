@@ -132,6 +132,7 @@ position = Vector2(189, 180)
 shape = SubResource("CircleShape2D_y8stc")
 
 [node name="SecretMenu" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(185, 207)
 scale = Vector2(0.212989, 0.110527)
 texture = ExtResource("3_qhqgy")

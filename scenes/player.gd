@@ -6,34 +6,41 @@ var direction := Vector2.ZERO
 @onready var _animated_sprite = $AnimatedSprite2D
 @onready var actionable_finder = $ActionableFinder
 @onready var secret_menu = $SecretMenu
+var show_menu = false
 
 func _ready():
-	secret_menu.visible = false
+	secret_menu.visible = show_menu
 	add_to_group("player")
 
 func read_input():
 	if not State.in_dialogue:
-		var input_vector := Vector2.ZERO
+		if not show_menu:
+			var input_vector := Vector2.ZERO
 
-		if Input.is_action_pressed("up"):
-			input_vector.y -= 1
-		elif Input.is_action_pressed("down"):
-			input_vector.y += 1
+			if Input.is_action_pressed("up"):
+				input_vector.y -= 1
+			elif Input.is_action_pressed("down"):
+				input_vector.y += 1
 
-		if Input.is_action_pressed("left"):
-			input_vector.x -= 1
-		elif Input.is_action_pressed("right"):
-			input_vector.x += 1
+			if Input.is_action_pressed("left"):
+				input_vector.x -= 1
+			elif Input.is_action_pressed("right"):
+				input_vector.x += 1
+			
+			
 
-		input_vector = input_vector.normalized()
+			input_vector = input_vector.normalized()
 
-		if input_vector != Vector2.ZERO:
-			direction = input_vector
-			velocity = input_vector * SPEED
-			_update_walk_animation()
-		else:
-			velocity = Vector2.ZERO
-			_update_idle_animation()
+			if input_vector != Vector2.ZERO:
+				direction = input_vector
+				velocity = input_vector * SPEED
+				_update_walk_animation()
+			else:
+				velocity = Vector2.ZERO
+				_update_idle_animation()
+		if Input.is_action_just_released("secret_menu"):
+			show_menu = !show_menu
+			secret_menu.visible = show_menu
 	
 
 func _update_walk_animation():
