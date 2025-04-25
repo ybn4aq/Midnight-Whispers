@@ -5,8 +5,10 @@ var direction := Vector2.ZERO
 
 @onready var _animated_sprite = $AnimatedSprite2D
 @onready var actionable_finder = $ActionableFinder
+@onready var secret_menu = $SecretMenu
 
 func _ready():
+	secret_menu.visible = false
 	add_to_group("player")
 
 func read_input():

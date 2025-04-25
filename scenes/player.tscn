@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://c5ynwievrvbqp"]
+[gd_scene load_steps=16 format=3 uid="uid://c5ynwievrvbqp"]
 
 [ext_resource type="Script" uid="uid://hmyf2ah26xqb" path="res://scenes/player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://cvv0bm6wqjo73" path="res://assets/Master Sprite Sheet.png" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://pgmgylol67xi" path="res://assets/MenuPullup.png" id="3_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fdfoy"]
 atlas = ExtResource("2_g2els")
@@ -129,3 +130,114 @@ collision_mask = 16
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableFinder"]
 position = Vector2(189, 180)
 shape = SubResource("CircleShape2D_y8stc")
+
+[node name="SecretMenu" type="Sprite2D" parent="."]
+position = Vector2(185, 207)
+scale = Vector2(0.212989, 0.110527)
+texture = ExtResource("3_qhqgy")
+
+[node name="Secrets" type="Label" parent="SecretMenu"]
+anchors_preset = -1
+anchor_left = 0.41217
+anchor_top = 0.0478315
+anchor_right = 0.552249
+anchor_bottom = 0.109664
+offset_left = -991.02
+offset_top = -953.319
+offset_right = -991.02
+offset_bottom = -953.319
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.946, 1.732)
+theme_override_font_sizes/font_size = 80
+text = "Secrets"
+
+[node name="FranklinSecret" type="Label" parent="SecretMenu"]
+offset_left = -976.635
+offset_top = -659.956
+offset_right = 740.365
+offset_bottom = -592.956
+scale = Vector2(0.946, 1.732)
+theme_override_font_sizes/font_size = 48
+text = "Franklin: Eugene married four times and has cheated on each of his wives."
+
+[node name="RachelSecret" type="Label" parent="SecretMenu"]
+offset_left = -976.635
+offset_top = -540.933
+offset_right = 803.365
+offset_bottom = -473.933
+scale = Vector2(0.946, 1.732)
+theme_override_font_sizes/font_size = 48
+text = "Rachel: Ben hacked into his school and looked at everyone's search histories."
+
+[node name="JulieSecret" type="Label" parent="SecretMenu"]
+offset_left = -976.635
+offset_top = -421.91
+offset_right = 281.365
+offset_bottom = -354.91
+scale = Vector2(0.946, 1.732)
+theme_override_font_sizes/font_size = 48
+text = "Julie: No one would notice if Ron disappeared one day."
+
+[node name="BenSecret" type="Label" parent="SecretMenu"]
+offset_left = -976.635
+offset_top = -302.887
+offset_right = 608.365
+offset_bottom = -235.887
+scale = Vector2(0.946, 1.732)
+theme_override_font_sizes/font_size = 48
+text = "Ben: Julie has been researching how to \"socially ruin\" someone's life."
+
+[node name="BooSecret" type="Label" parent="SecretMenu"]
+offset_left = -976.635
+offset_top = -183.864
+offset_right = -104.635
+offset_bottom = -116.864
+scale = Vector2(0.946, 1.732)
+theme_override_font_sizes/font_size = 48
+text = "Boo: Spike is stealing songs from Boo."
+
+[node name="ClaraSecret" type="Label" parent="SecretMenu"]
+offset_left = -976.635
+offset_top = -64.8412
+offset_right = -171.635
+offset_bottom = 2.15884
+scale = Vector2(0.946, 1.732)
+theme_override_font_sizes/font_size = 48
+text = "Clara: Boo steals from her parents."
+
+[node name="GregSecret" type="Label" parent="SecretMenu"]
+offset_left = -976.635
+offset_top = 54.1818
+offset_right = 531.365
+offset_bottom = 121.182
+scale = Vector2(0.946, 1.732)
+theme_override_font_sizes/font_size = 48
+text = "Greg: Shawn is planning on leaving town without telling anybody."
+
+[node name="EugeneSecret" type="Label" parent="SecretMenu"]
+offset_left = -976.635
+offset_top = 190.208
+offset_right = -48.6349
+offset_bottom = 257.208
+scale = Vector2(0.946, 1.732)
+theme_override_font_sizes/font_size = 48
+text = "Eugene: Charles lied about going to war."
+
+[node name="CharlesSecret" type="Label" parent="SecretMenu"]
+offset_left = -976.635
+offset_top = 309.231
+offset_right = 872.365
+offset_bottom = 376.231
+scale = Vector2(0.946, 1.732)
+theme_override_font_sizes/font_size = 48
+text = "Charles: Bjorn thinks his ship made it to Greenland, but it actually crashed here."
+
+[node name="ElphieSecret" type="Label" parent="SecretMenu"]
+offset_left = -976.635
+offset_top = 428.254
+offset_right = 242.365
+offset_bottom = 495.254
+scale = Vector2(0.94573, 1.73209)
+theme_override_font_sizes/font_size = 48
+text = "Bjorn: Elphie thinks she actually has magical powers."
