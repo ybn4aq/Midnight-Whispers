@@ -133,8 +133,8 @@ shape = SubResource("CircleShape2D_y8stc")
 
 [node name="SecretMenu" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(185, 207)
-scale = Vector2(0.212989, 0.110527)
+position = Vector2(183, 204)
+scale = Vector2(0.15, 0.078)
 texture = ExtResource("3_qhqgy")
 
 [node name="Secrets" type="Label" parent="SecretMenu"]
@@ -152,6 +152,7 @@ grow_vertical = 2
 scale = Vector2(0.946, 1.732)
 theme_override_font_sizes/font_size = 80
 text = "Secrets"
+metadata/_edit_use_anchors_ = true
 
 [node name="FranklinSecret" type="Label" parent="SecretMenu"]
 offset_left = -976.635
@@ -161,6 +162,7 @@ offset_bottom = -592.956
 scale = Vector2(0.946, 1.732)
 theme_override_font_sizes/font_size = 48
 text = "Franklin: Eugene married four times and has cheated on each of his wives."
+metadata/_edit_use_anchors_ = true
 
 [node name="RachelSecret" type="Label" parent="SecretMenu"]
 offset_left = -976.635
@@ -170,6 +172,7 @@ offset_bottom = -473.933
 scale = Vector2(0.946, 1.732)
 theme_override_font_sizes/font_size = 48
 text = "Rachel: Ben hacked into his school and looked at everyone's search histories."
+metadata/_edit_use_anchors_ = true
 
 [node name="JulieSecret" type="Label" parent="SecretMenu"]
 offset_left = -976.635
@@ -179,6 +182,7 @@ offset_bottom = -354.91
 scale = Vector2(0.946, 1.732)
 theme_override_font_sizes/font_size = 48
 text = "Julie: No one would notice if Ron disappeared one day."
+metadata/_edit_use_anchors_ = true
 
 [node name="BenSecret" type="Label" parent="SecretMenu"]
 offset_left = -976.635
@@ -188,6 +192,7 @@ offset_bottom = -235.887
 scale = Vector2(0.946, 1.732)
 theme_override_font_sizes/font_size = 48
 text = "Ben: Julie has been researching how to \"socially ruin\" someone's life."
+metadata/_edit_use_anchors_ = true
 
 [node name="BooSecret" type="Label" parent="SecretMenu"]
 offset_left = -976.635
@@ -197,6 +202,7 @@ offset_bottom = -116.864
 scale = Vector2(0.946, 1.732)
 theme_override_font_sizes/font_size = 48
 text = "Boo: Spike is stealing songs from Boo."
+metadata/_edit_use_anchors_ = true
 
 [node name="ClaraSecret" type="Label" parent="SecretMenu"]
 offset_left = -976.635
@@ -206,6 +212,7 @@ offset_bottom = 2.15884
 scale = Vector2(0.946, 1.732)
 theme_override_font_sizes/font_size = 48
 text = "Clara: Boo steals from her parents."
+metadata/_edit_use_anchors_ = true
 
 [node name="GregSecret" type="Label" parent="SecretMenu"]
 offset_left = -976.635
@@ -215,6 +222,7 @@ offset_bottom = 121.182
 scale = Vector2(0.946, 1.732)
 theme_override_font_sizes/font_size = 48
 text = "Greg: Shawn is planning on leaving town without telling anybody."
+metadata/_edit_use_anchors_ = true
 
 [node name="EugeneSecret" type="Label" parent="SecretMenu"]
 offset_left = -976.635
@@ -224,6 +232,7 @@ offset_bottom = 257.208
 scale = Vector2(0.946, 1.732)
 theme_override_font_sizes/font_size = 48
 text = "Eugene: Charles lied about going to war."
+metadata/_edit_use_anchors_ = true
 
 [node name="CharlesSecret" type="Label" parent="SecretMenu"]
 offset_left = -976.635
@@ -233,6 +242,7 @@ offset_bottom = 376.231
 scale = Vector2(0.946, 1.732)
 theme_override_font_sizes/font_size = 48
 text = "Charles: Bjorn thinks his ship made it to Greenland, but it actually crashed here."
+metadata/_edit_use_anchors_ = true
 
 [node name="BjornSecret" type="Label" parent="SecretMenu"]
 offset_left = -976.635
@@ -242,6 +252,7 @@ offset_bottom = 495.254
 scale = Vector2(0.94573, 1.73209)
 theme_override_font_sizes/font_size = 48
 text = "Bjorn: Elphie thinks she actually has magical powers."
+metadata/_edit_use_anchors_ = true
 
 [node name="SeanSecret" type="Label" parent="SecretMenu"]
 offset_left = -976.576
@@ -251,6 +262,7 @@ offset_bottom = 679.854
 scale = Vector2(0.946, 1.732)
 theme_override_font_sizes/font_size = 48
 text = "Sean: Rachel drives illegally."
+metadata/_edit_use_anchors_ = true
 
 [node name="SpikeSecret" type="Label" parent="SecretMenu"]
 offset_left = -976.576
@@ -260,12 +272,14 @@ offset_bottom = 727.472
 scale = Vector2(0.946, 1.732)
 theme_override_font_sizes/font_size = 48
 text = "Spike: Greg's manhood leaves much to be desired."
+metadata/_edit_use_anchors_ = true
 
 [node name="TimeLabel" type="Label" parent="."]
-offset_left = 344.0
-offset_top = 27.0
-offset_right = 415.0
-offset_bottom = 50.0
+offset_left = 301.0
+offset_top = 60.0
+offset_right = 372.0
+offset_bottom = 83.0
+scale = Vector2(0.7, 0.7)
 text = "12:00 AM"
 
 [node name="Timer" type="Timer" parent="TimeLabel"]

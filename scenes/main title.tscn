@@ -10,22 +10,22 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -239.0
-offset_top = -202.0
-offset_right = -239.0
-offset_bottom = -202.0
+offset_left = -659.0
+offset_top = -495.0
+offset_right = -659.0
+offset_bottom = -495.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(216.428, 169.789)
+scale = Vector2(1.3494, 0.987423)
 script = ExtResource("1_prcoc")
 
 [node name="FlashingLabel" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -4.56985
-offset_top = -3.63543
-offset_right = 1019.43
-offset_bottom = 1020.36
-scale = Vector2(0.012, 0.01)
+offset_left = -208.982
+offset_top = -142.796
+offset_right = 815.018
+offset_bottom = 881.199
+scale = Vector2(1.39788, 1.27565)
 texture = ExtResource("2_8mcxd")
 
 [node name="FlashTimer" type="Timer" parent="."]
