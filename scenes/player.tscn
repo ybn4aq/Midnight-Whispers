@@ -260,3 +260,16 @@ offset_bottom = 727.472
 scale = Vector2(0.946, 1.732)
 theme_override_font_sizes/font_size = 48
 text = "Spike: Greg's manhood leaves much to be desired."
+
+[node name="TimeLabel" type="Label" parent="."]
+offset_left = 344.0
+offset_top = 27.0
+offset_right = 415.0
+offset_bottom = 50.0
+text = "12:00 AM"
+
+[node name="Timer" type="Timer" parent="TimeLabel"]
+wait_time = 15.0
+autostart = true
+
+[connection signal="timeout" from="TimeLabel/Timer" to="." method="_on_timer_timeout"]

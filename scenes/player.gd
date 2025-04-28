@@ -18,6 +18,18 @@ var direction := Vector2.ZERO
 @onready var bjorn_secret = $SecretMenu/BjornSecret
 @onready var sean_secret = $SecretMenu/SeanSecret
 @onready var spike_secret = $SecretMenu/SpikeSecret
+@onready var time_label = $TimeLabel
+@onready var timer = $TimeLabel/Timer
+var time_values = [
+  "12:00 AM", "12:10 AM", "12:20 AM", "12:30 AM", "12:40 AM", "12:50 AM",
+  "1:00 AM", "1:10 AM", "1:20 AM", "1:30 AM", "1:40 AM", "1:50 AM",
+  "2:00 AM", "2:10 AM", "2:20 AM", "2:30 AM", "2:40 AM", "2:50 AM",
+  "3:00 AM", "3:10 AM", "3:20 AM", "3:30 AM", "3:40 AM", "3:50 AM",
+  "4:00 AM", "4:10 AM", "4:20 AM", "4:30 AM", "4:40 AM", "4:50 AM",
+  "5:00 AM", "5:10 AM", "5:20 AM", "5:30 AM", "5:40 AM", "5:50 AM"]
+var time_value_idx = 0
+var timer_countdown: float
+
 
 var show_menu = false
 
@@ -36,12 +48,12 @@ func _ready():
 	bjorn_secret.text = str("?????")
 	sean_secret.text = str("?????")
 	spike_secret.text = str("?????")
+	time_label.text = str("12:00 AM")
 	State.secret_learned.connect(_on_secret_learned)
 	
 	
 
 func _on_secret_learned(character):
-	print("hello")
 	match character:
 		"franklin":
 			franklin_secret.text = str("Franklin: Eugene married four times and has cheated on each of his wives.")
@@ -143,3 +155,16 @@ func _unhandled_input(_event: InputEvent) -> void:
 				actionables[0].action(direction)
 				State.in_dialogue = true
 				_update_idle_animation()
+
+
+func _on_timer_timeout() -> void:
+	time_value_idx += 1
+	if time_value_idx >= 36:
+		game_over()
+	else:
+		time_label.text = str(time_values[time_value_idx])
+		timer.start(15)
+		
+
+func game_over():
+	pass
