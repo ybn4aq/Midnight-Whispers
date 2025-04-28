@@ -251,3 +251,12 @@ offset_bottom = 679.854
 scale = Vector2(0.946, 1.732)
 theme_override_font_sizes/font_size = 48
 text = "Sean: Rachel drives illegally."
+
+[node name="SpikeSecret" type="Label" parent="SecretMenu"]
+offset_left = -976.576
+offset_top = 660.472
+offset_right = 184.424
+offset_bottom = 727.472
+scale = Vector2(0.946, 1.732)
+theme_override_font_sizes/font_size = 48
+text = "Spike: Greg's manhood leaves much to be desired."

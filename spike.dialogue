@@ -31,6 +31,7 @@ if State.spike_convo_lock == 0:
 				Spike: Shell of a man?? I do what I have to do to survive in this industry. Yes, I take Boo's ideas and make them my own. But I am NOT a shell of man, that's Greg. That muscular lumberjack's pecker is tinier than a jelly bean. And he's scared of the dark. He's the one to crack.
 				set State.spike_convo_lock = 2
 				set State.spike_secret_known = true
+				do State.learn_secret("spike")
 				=> end_d
 			- OK, but what's the profit margin like? I would join you. Any way to make money and I am in.
 				Godfrey: OK, but what's the profit margin like? I would join you. Any way to make money and I am in.

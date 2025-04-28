@@ -17,6 +17,7 @@ var direction := Vector2.ZERO
 @onready var charles_secret = $SecretMenu/CharlesSecret
 @onready var bjorn_secret = $SecretMenu/BjornSecret
 @onready var sean_secret = $SecretMenu/SeanSecret
+@onready var spike_secret = $SecretMenu/SpikeSecret
 
 var show_menu = false
 
@@ -34,6 +35,7 @@ func _ready():
 	charles_secret.text = str("?????")
 	bjorn_secret.text = str("?????")
 	sean_secret.text = str("?????")
+	spike_secret.text = str("?????")
 	State.secret_learned.connect(_on_secret_learned)
 	
 	
@@ -63,6 +65,8 @@ func _on_secret_learned(character):
 			bjorn_secret.text = str("Bjorn: Elphie thinks she actually has magical powers.")
 		"sean":
 			sean_secret.text = str("Sean: Rachel drives illegally.")
+		"spike":
+			spike_secret.text = str("Spike: Greg's manhood leaves much to be desired.")
 		_:
 			print(str(character) + "Not recognized under secret_learned signal emission")
 			
