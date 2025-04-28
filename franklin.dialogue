@@ -6,7 +6,7 @@ if State.franklin_convo_lock == 0:
 		Godfrey: I'm new in town. Just moved in. I guess you kinda know everybody in this town.
 		Franklin: Yeh, youze could say that. I make it my bizness to know everybody else's biziness.
 		- Tell me someone's SECRET!!! I wanna know oneeee! Give me the tea!
-			Godfrey: Tell me someone's SECRET!!! I wanna know oneeee! Give me the tea!
+			Godfrey: Tell me someone's [shake rate=20 level=20]SECRET!!![/shake] I wanna know oneeee! Give me the tea!
 			Franklin: Youze seem unprofessional. I don't speak with juveniles.
 			set State.franklin_convo_lock = 2
 			set State.chain_lock2 = true

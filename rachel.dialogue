@@ -28,7 +28,7 @@ if State.rachel_convo_lock == 0:
 			Rachel: What? How do you know that? Please don't tell my mom, she'll literally kill me.
 			- I won't tell a soul. As long as you tell me something that YOU have never told a soul.
 				Godfrey: I won't tell a soul. As long as you tell me something that YOU have never told a soul.
-				Rachel: Fiiine. Ben, that blonde nerd from school, he like totally hacked into the system and looked at everybody's search histories. He knows like so much. Now leave me alone.
+				Rachel: [wave amp=25 freq=5]Fiiine.[/wave] Ben, that blonde nerd from school, he like totally hacked into the system and looked at everybody's search histories. He knows like so much. Now leave me alone.
 				set State.rachel_convo_lock = 2
 				set State.rachel_secret_known = true
 				do State.learn_secret("rachel")
@@ -43,7 +43,7 @@ elif State.rachel_convo_lock == 1:
 	Rachel: Ew, whaaat? Super kinky. I am like totally not into that.
 	=> end_d
 elif State.rachel_convo_lock == 2:
-	Rachel: Fiiine. Ben, that blonde nerd from school, he like totally hacked into the system and looked at everybody's search histories. He knows like so much. Now leave me alone.
+	Rachel: [wave amp=25 freq=5]Fiiine.[/wave] Ben, that blonde nerd from school, he like totally hacked into the system and looked at everybody's search histories. He knows like so much. Now leave me alone.
 	=> end_d
 elif State.rachel_convo_lock == 3:
 	Rachel: All the boys at school like my fits. You're one of those weird kids.

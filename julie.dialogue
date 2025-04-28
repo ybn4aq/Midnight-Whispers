@@ -33,7 +33,7 @@ if State.julie_convo_lock == 0:
 				do State.learn_secret("julie")
 				=> end_d
 			- Ben and Rachel, sitting in a tree. K-I-S-S-I-N-G. Boohoo. Grow up. Life isn't fair.
-				Godfrey: Ben and Rachel, sitting in a tree. K-I-S-S-I-N-G. Boohoo. Grow up. Life isn't fair.
+				Godfrey: Ben and Rachel, sitting in a tree. [wave amp=50 freq=5]K-I-S-S-I-N-G[/wave]. Boohoo. Grow up. Life isn't fair.
 				Julie: Waaaaah. You're so mean! Waaaaaaaaaah.
 				set State.julie_convo_lock = 1
 				set State.chain_lock1 = true

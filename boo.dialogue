@@ -4,26 +4,26 @@ if State.boo_convo_lock == 0:
 		Boo: La di da di da da!
 		- You got a nice sound, kid.
 			Godfrey: You got a nice sound, kid.
-			Boo: THANKS. I CAN DO LOUDER. LA LA LA LA LA!
+			Boo: THANKS. I CAN DO LOUDER. [wave amp=50 freq=5]LA LA LA LA LA![/wave]
 			=> end_d
 		- Would you stop that? I'm trying to ponder the world over here.
 			Godfrey: Would you stop that? I'm trying to ponder the world over here.
-			Boo: LA DI DA DI DA DA! LOO DI LA DI LOO LA!
+			Boo: [shake rate=20 level=10]LA DI DA DI DA DA! LOO DI LA DI LOO LA![/shake]
 			=> end_d
 	elif State.clara_secret_known == true:
 		Boo: La di da di da da!
 		- You got a nice sound, kid.
 			Godfrey: You got a nice sound, kid.
-			Boo: THANKS. I CAN DO LOUDER. LA LA LA LA LA!
+			Boo: THANKS. I CAN DO LOUDER. [wave amp=50 freq=5]LA LA LA LA LA![/wave]
 			=> end_d
 		- Would you stop that? I'm trying to ponder the world over here.
 			Godfrey: Would you stop that? I'm trying to ponder the world over here.
-			Boo: LA DI DA DI DA DA! LOO DI LA DI LOO LA!
+			Boo: [shake rate=20 level=10]LA DI DA DI DA DA! LOO DI LA DI LOO LA![/shake]
 			set State.boo_convo_lock = 3
 			set State.chain_lock3 = true
 			=> end_d
 		- (singing) You are steal-ing from your par-ents! [if State.chain_lock3 == false]
-			Godfrey: (singing) You are steal-ing from your par-ents!
+			Godfrey: (singing) [wave amp=50 freq=5]You are steal-ing from your par-ents![/wave]
 			Boo: Huh? What do you know, stranger? La la la! I am just a kid!
 			- DON'T PLAY DUMB! YOU ARE GOING TO HELP ME KILL SOMEONE. YOU ARE GOING TO HELP ME NOW.
 				Godfrey: DON'T PLAY DUMB! YOU ARE GOING TO HELP ME KILL SOMEONE. YOU ARE GOING TO HELP ME NOW.
@@ -46,7 +46,7 @@ elif State.boo_convo_lock == 2:
 	Boo: NOOOOO. Don't tell them. I will stop stealing from them, I pinky promise. I only do it because of stupid Spike stealing from me, too!! All of the songs on his dumb punk rock label are taken from tunes I CREATE! Listen to his songs, you'll notice it!
 	=> end_d
 elif State.boo_convo_lock == 3:
-	Boo: LA DI DA DI DA DA! LOO DI LA DI LOO LA!
+	Boo: [shake rate=20 level=10]LA DI DA DI DA DA! LOO DI LA DI LOO LA![/shake]
 	=> end_d
 ~ end_d
 set State.in_dialogue = false
