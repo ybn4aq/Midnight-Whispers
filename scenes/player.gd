@@ -138,6 +138,8 @@ func _play_animation_if_needed(name: String):
 		_animated_sprite.play(name)
 
 func _physics_process(delta: float) -> void:
+	if show_menu:
+		velocity = Vector2.ZERO
 	read_input()
 	update_actionable_finder_position()
 	move_and_slide()
@@ -163,7 +165,7 @@ func _on_timer_timeout() -> void:
 		game_over()
 	else:
 		time_label.text = str(time_values[time_value_idx])
-		timer.start(15)
+		timer.start(18)
 		
 
 func game_over():

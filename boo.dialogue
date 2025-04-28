@@ -33,7 +33,8 @@ if State.boo_convo_lock == 0:
 				=> end_d
 			- Don't play coy with me. I am on my way to tell your parents right now. Say goodbye to that Barbie Dream House!
 				Godfrey: Don't play coy with me. I am on my way to tell your parents right now. Say goodbye to that Barbie Dream House!
-				Boo: NOOOOO. Don't tell them. I will stop stealing from them, I pinky promise. I only do it because of stupid Spike stealing from me, too!! All of the songs on his dumb punk rock label are taken from tunes I CREATE! Listen to his songs, you'll notice it!
+				Boo: NOOOOO. Don't tell them. I will stop stealing from them, I pinky promise. 
+				Boo: I only do it because of stupid Spike stealing from me, too!! All of the songs on his dumb punk rock label are taken from tunes I CREATE! Listen to his songs, you'll notice it!
 				set State.boo_convo_lock = 2
 				set State.boo_secret_known = true
 				do State.learn_secret("boo")

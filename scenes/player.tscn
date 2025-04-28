@@ -269,7 +269,7 @@ offset_bottom = 50.0
 text = "12:00 AM"
 
 [node name="Timer" type="Timer" parent="TimeLabel"]
-wait_time = 15.0
+wait_time = 18.0
 autostart = true
 
 [connection signal="timeout" from="TimeLabel/Timer" to="." method="_on_timer_timeout"]
