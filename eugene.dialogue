@@ -22,7 +22,7 @@ if State.eugene_convo_lock == 0:
 			set State.eugene_convo_lock = 3
 			set State.chain_lock2 = true
 			=> end_d
-		- Hey man, how many movies are inspired by your wives? You couldn't have cheated that many times. [if State.chain_lock2 == false]
+		- Hey man, how many movies are inspired by your wives... [if State.chain_lock2 == false]
 			Godfrey: Hey man, how many movies are inspired by your wives? You couldn't have cheated that many times.
 			Eugene: Oh no are you one of my ex-wives?? I'm sorry hunny I didn't recognize you with how pale you look, do you need to see the doctor?
 			- Never in my lifetimes would I marry you.

@@ -25,14 +25,14 @@ if State.bjorn_convo_lock == 0:
 		- How long have you been here in Greenland? [if State.chain_lock2 == false]
 			Godfrey: How long have you been here in Greenland?
 			Bjorn: I have spent eight winters here since my journey across the water.
-			- You seem to be having a great time here! What is your secret to staying so positive in the isolation so far north?
+			- You seem to be having a great time here! What is your secret to staying so positive...
 				Godfrey: You seem to be having a great time here! What is your secret to staying so positive in the isolation so far north?
 				Bjorn: It is not always easy, but you have to stay sharp in the mind. Look at Elphie, she sadly lost site of that and now thinks she has powers. Me thinks the frost got to her mind.
 				set State.bjorn_convo_lock = 2
 				set State.bjorn_secret_known = true
 				do State.learn_secret("bjorn")
 				=> end_d
-			- Yes of course, the arctic is normally 40 degrees on a chilly day. We're not in Greenland! Your ship crashed.
+			- Yes of course, the arctic is normally 40 degrees on a chilly day. We're not in Greenland...
 				Godfrey: Yes of course, the arctic is normally 40 degrees on a chilly day. We're not in Greenland! Your ship crashed.
 				Bjorn: I have to go check my maps.
 				set State.bjorn_convo_lock = 1

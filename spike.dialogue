@@ -26,14 +26,14 @@ if State.spike_convo_lock == 0:
 		- Is the rock within you? Or does Boo have all the talent, you liar. [if State.chain_lock3 == false]
 			Godfrey: Is the rock within you? Or does Boo have all the talent, you liar.
 			Spike: Boo? That little girl? I mean er-I don't know who you're talking about. I am the creator of punk vibrations. Music in this town would be nothing without me.
-			- This is seriously messed up what you are doing. You are stealing music from a child? You pathetic runt. You are a shell of a man.
+			- This is seriously messed up what you are doing. You are stealing music from a child...
 				Godfrey: This is seriously messed up what you are doing. You are stealing music from a child? You pathetic runt. You are a shell of a man.
 				Spike: Shell of a man?? I do what I have to do to survive in this industry. Yes, I take Boo's ideas and make them my own. But I am NOT a shell of man, that's Greg. That muscular lumberjack's pecker is tinier than a jelly bean. And he's scared of the dark. He's the one to crack.
 				set State.spike_convo_lock = 2
 				set State.spike_secret_known = true
 				do State.learn_secret("spike")
 				=> end_d
-			- OK, but what's the profit margin like? I would join you. Any way to make money and I am in.
+			- OK, but what's the profit margin like? I would join you...
 				Godfrey: OK, but what's the profit margin like? I would join you. Any way to make money and I am in.
 				Spike: [shake rate=20 level=20]Hell no![/shake] I am not sharing with another soul on this earth. Leave it alone, freakoid.
 				set State.spike_convo_lock = 1
