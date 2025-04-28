@@ -17,6 +17,7 @@ if State.sean_convo_lock == 0:
 			Sean: Well, I shouldn't tell you this, but Rachel doesn't really have her license. She kept failing the exam so she just drives her car now illegally...
 			set State.sean_convo_lock = 3
 			set State.sean_secret_known = true
+			do State.learn_secret("sean")
 			=> end_d
 		
 		- OMG! Car broke down. Sucks to suck. That's gonna be so expensive to fix. Lol!

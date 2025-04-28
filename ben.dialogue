@@ -23,23 +23,24 @@ if State.ben_convo_lock == 0:
 			Godfrey: I love that series. Which installment are you playing?
 			Ben: Symphony of the Night. I just saw Richter in the colosseum. Can't wait to get back to it!
 			=> end_d
-		- I think we both know, you aren't just a gamer. You're using your software knowledge for evil purposes. [if State.chain_lock1 == false]
+		- I think we both know, you aren't just a gamer... [if State.chain_lock1 == false]
 			Godfrey: I think we both know, you aren't just a gamer. You're using your software knowledge for evil purposes.
 			Ben: Huh? I have no idea of what you are referring. I just watch Twitch and play video games, that's all.
-			- I bet you have no friends at school and nobody likes you. You probably make the teachers angry too. I know people like you.
+			- I bet you have no friends at school and nobody likes you...
 				Godfrey: I bet you have no friends at school and nobody likes you. You probably make the teachers angry too. I know people like you.
-				Ben: That is not true! I hang with the SNES club after school every day! You're just a meanie.
+				Ben: That is not true! I hang with the Playstation club after school every day! You're just a meanie.
 				set State.ben_convo_lock = 1
 				set State.chain_lock1 = true
 				=> end_d
-			- That is NOT all. I know you hacked into the school's network. I know you know a lot about people in this town. And you're going to tell me something I want to know.
+			- That is NOT all... and you're going to tell me something I want to know...
 				Godfrey: That is NOT all. I know you hacked into the school's network. I know you know a lot about people in this town. And you're going to tell me something I want to know..
 				Ben: Okay, okay. This is none of my business, but Julie is...crazy. She has been researching how to "socially ruin" someone. She's always had a crush on Sean. But everyone knows Rachel and Sean are an item. I don't care to know what Julie's plans are.
 				set State.ben_convo_lock = 2
 				set State.ben_secret_known = true
+				do State.learn_secret("ben")
 				=> end_d
 elif State.ben_convo_lock == 1:
-	Ben: That is not true! I hang with the SNES club after school every day! You're just a meanie.
+	Ben: That is not true! I hang with the Playstation club after school every day! You're just a meanie.
 	=> end_d
 elif State.ben_convo_lock == 2:
 	Ben: Okay, okay. This is none of my business, but Julie is...crazy. She has been researching how to "socially ruin" someone. She's always had a crush on Sean. But everyone knows Rachel and Sean are an item. I don't care to know what Julie's plans are.

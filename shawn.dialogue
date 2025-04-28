@@ -27,7 +27,7 @@ if State.shawn_convo_lock == 0:
 			Shawn: What? How did you hear that? And shush up! Sean is right there! We can't talk about this here.
 			- You're evil. More evil than me. And I am the vampire.
 				Godfrey: You're evil. More evil than me. And I am the vampire.
-				Shawn: Vam-? Vampire? Wh-? What?? Aaaaaah! I knew there was something off about you!!
+				Shawn: Vam-? Vampire? Wh-? What?? [shake rate=20 level=25]Aaaaaah![/shake] I knew there was something off about you!!
 				set State.shawn_convo_lock = 1
 				set State.chain_lock3 = true
 				=> end_d
@@ -40,7 +40,7 @@ if State.shawn_convo_lock == 0:
 				=> end_d
 			
 elif State.shawn_convo_lock == 1:
-	Shawn: Vam-? Vampire? Wh-? What?? Aaaaaah! I knew there was something off about you!!
+	Shawn: Vam-? Vampire? Wh-? What?? [shake rate=20 level=25]Aaaaaah![/shake] I knew there was something off about you!!
 	=> end_d
 elif State.shawn_convo_lock == 2:
 	Shawn: Aw. That wasn't very nice. Feelings, hurt.

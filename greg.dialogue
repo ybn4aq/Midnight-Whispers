@@ -31,6 +31,7 @@ if State.greg_convo_lock == 0:
 				Greg: Alright man, you're right! I have to keep this image so that people respect me and girls will like me. I honestly just want to leave this town. I mean, even that kid Shawn is getting out of this shithole. And he's going to do it without telling a soul. That's my dream way to go: Irish exit!
 				set State.greg_convo_lock = 2
 				set State.greg_secret_known = true
+				do State.learn_secret("greg")
 				=> end_d
 			- I just guessed it myself. Sometimes you can just tell with that kinda thing. I will kill you now, Greg.
 				Godfrey: I just guessed it myself. Sometimes you can just tell with that kinda thing. I will kill you now, Greg.

@@ -22,7 +22,7 @@ if State.eugene_convo_lock == 0:
 			set State.eugene_convo_lock = 3
 			set State.chain_lock2 = true
 			=> end_d
-		- Hey man, how many movies are inspired by your wives? You couldn't have cheated that many times. [if State.chain_lock2 == false]
+		- Hey man, how many movies are inspired by your wives... [if State.chain_lock2 == false]
 			Godfrey: Hey man, how many movies are inspired by your wives? You couldn't have cheated that many times.
 			Eugene: Oh no are you one of my ex-wives?? I'm sorry hunny I didn't recognize you with how pale you look, do you need to see the doctor?
 			- Never in my lifetimes would I marry you.
@@ -33,9 +33,10 @@ if State.eugene_convo_lock == 0:
 				=> end_d
 			- No, I'm good, but that is nice of you to offer.
 				Godfrey: No, I'm good, but that is nice of you to offer.
-				Eugene: Of course, I try to look out for those I made a "commitment" to, unlike Charles over here. I'll let my biggest fan in on a secret. Charles did not actually go to war, he just needed the time to retake Organic chemistry to get into med school with a better gpa.
+				Eugene: Of course, I try to look out for those I made a "commitment" to, unlike Charles over here. I'll let my biggest fan in on a secret. Charles did not actually go to war, he just needed the time to retake Organic chemistry to get into med school with a better GPA.
 				set State.eugene_convo_lock = 2
 				set State.eugene_secret_known = true
+				do State.learn_secret("eugene")
 				=> end_d
 elif State.eugene_convo_lock == 1:
 	Eugene:Hey, not yet, I could try to change your mind.

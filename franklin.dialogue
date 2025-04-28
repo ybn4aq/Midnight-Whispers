@@ -6,7 +6,7 @@ if State.franklin_convo_lock == 0:
 		Godfrey: I'm new in town. Just moved in. I guess you kinda know everybody in this town.
 		Franklin: Yeh, youze could say that. I make it my bizness to know everybody else's biziness.
 		- Tell me someone's SECRET!!! I wanna know oneeee! Give me the tea!
-			Godfrey: Tell me someone's SECRET!!! I wanna know oneeee! Give me the tea!
+			Godfrey: Tell me someone's [shake rate=20 level=20]SECRET!!![/shake] I wanna know oneeee! Give me the tea!
 			Franklin: Youze seem unprofessional. I don't speak with juveniles.
 			set State.franklin_convo_lock = 2
 			set State.chain_lock2 = true
@@ -16,6 +16,7 @@ if State.franklin_convo_lock == 0:
 			Franklin: Thanks, pal. Hey, I got sum juice for yah. You met the older feller Eugene? Been married four times and has cheated on each of his wives. Don't know why they keep falling in love with the prick.
 			set State.franklin_convo_lock = 3
 			set State.franklin_secret_known = true
+			do State.learn_secret("franklin")
 			=> end_d
 	- Goofy hat you got on. That looks silly.
 		Godfrey: Goofy hat you got on. That looks silly.

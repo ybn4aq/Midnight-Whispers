@@ -86,10 +86,10 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 21.0
-offset_top = -183.0
-offset_right = -19.0
-offset_bottom = -19.0
+offset_left = 24.0
+offset_top = -364.0
+offset_right = -56.0
+offset_bottom = -64.0
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 1
@@ -108,7 +108,7 @@ theme_override_constants/separation = 30
 
 [node name="Portrait" type="TextureRect" parent="Balloon/Panel/Dialogue/HBoxContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(150, 0)
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Balloon/Panel/Dialogue/HBoxContainer"]
@@ -120,7 +120,7 @@ unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
-theme_override_font_sizes/normal_font_size = 33
+theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
 text = "Character"
 fit_content = true
@@ -130,7 +130,7 @@ scroll_active = false
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/normal_font_size = 34
 text = "Dialogue..."
 
 [node name="Responses" type="MarginContainer" parent="Balloon"]
@@ -140,13 +140,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -307.0
-offset_top = -824.0
-offset_right = 334.0
-offset_bottom = -420.0
+offset_left = -588.0
+offset_top = -1169.0
+offset_right = 53.0
+offset_bottom = -765.0
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(1.5, 1.5)
+scale = Vector2(1.75, 1.75)
 
 [node name="ResponsesMenu" type="VBoxContainer" parent="Balloon/Responses" node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
