@@ -16,6 +16,7 @@ if State.franklin_convo_lock == 0:
 			Franklin: Thanks, pal. Hey, I got sum juice for yah. You met the older feller Eugene? Been married four times and has cheated on each of his wives. Don't know why they keep falling in love with the prick.
 			set State.franklin_convo_lock = 3
 			set State.franklin_secret_known = true
+			do State.learn_secret("franklin")
 			=> end_d
 	- Goofy hat you got on. That looks silly.
 		Godfrey: Goofy hat you got on. That looks silly.

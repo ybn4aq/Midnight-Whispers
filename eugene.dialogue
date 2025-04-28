@@ -36,6 +36,7 @@ if State.eugene_convo_lock == 0:
 				Eugene: Of course, I try to look out for those I made a "commitment" to, unlike Charles over here. I'll let my biggest fan in on a secret. Charles did not actually go to war, he just needed the time to retake Organic chemistry to get into med school with a better gpa.
 				set State.eugene_convo_lock = 2
 				set State.eugene_secret_known = true
+				do State.learn_secret("eugene")
 				=> end_d
 elif State.eugene_convo_lock == 1:
 	Eugene:Hey, not yet, I could try to change your mind.

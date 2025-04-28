@@ -234,7 +234,7 @@ scale = Vector2(0.946, 1.732)
 theme_override_font_sizes/font_size = 48
 text = "Charles: Bjorn thinks his ship made it to Greenland, but it actually crashed here."
 
-[node name="ElphieSecret" type="Label" parent="SecretMenu"]
+[node name="BjornSecret" type="Label" parent="SecretMenu"]
 offset_left = -976.635
 offset_top = 428.254
 offset_right = 242.365
@@ -242,3 +242,12 @@ offset_bottom = 495.254
 scale = Vector2(0.94573, 1.73209)
 theme_override_font_sizes/font_size = 48
 text = "Bjorn: Elphie thinks she actually has magical powers."
+
+[node name="SeanSecret" type="Label" parent="SecretMenu"]
+offset_left = -976.576
+offset_top = 542.854
+offset_right = 2331.42
+offset_bottom = 679.854
+scale = Vector2(0.946, 1.732)
+theme_override_font_sizes/font_size = 48
+text = "Sean: Rachel drives illegally."

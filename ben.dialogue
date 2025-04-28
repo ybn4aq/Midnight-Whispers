@@ -37,6 +37,7 @@ if State.ben_convo_lock == 0:
 				Ben: Okay, okay. This is none of my business, but Julie is...crazy. She has been researching how to "socially ruin" someone. She's always had a crush on Sean. But everyone knows Rachel and Sean are an item. I don't care to know what Julie's plans are.
 				set State.ben_convo_lock = 2
 				set State.ben_secret_known = true
+				do State.learn_secret("ben")
 				=> end_d
 elif State.ben_convo_lock == 1:
 	Ben: That is not true! I hang with the SNES club after school every day! You're just a meanie.

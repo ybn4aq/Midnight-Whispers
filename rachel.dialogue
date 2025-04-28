@@ -31,6 +31,7 @@ if State.rachel_convo_lock == 0:
 				Rachel: Fiiine. Ben, that blonde nerd from school, he like totally hacked into the system and looked at everybody's search histories. He knows like so much. Now leave me alone.
 				set State.rachel_convo_lock = 2
 				set State.rachel_secret_known = true
+				do State.learn_secret("rachel")
 				=> end_d
 			- I'm going to tell everybody in this town. And then I am going to drink your blood.
 				Godfrey: I'm going to tell everybody in this town. And then I am going to drink your blood.

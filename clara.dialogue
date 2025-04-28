@@ -16,6 +16,7 @@ if State.clara_convo_lock == 0:
 			Clara: Alright sweetie, you just holler if you need me. You know, you seem like a good kid. Unlike that Boo. She steals from her parents and they don't have a clue. Can't imagine if any of my boys were like that.
 			set State.clara_convo_lock = 3
 			set State.clara_secret_known = true
+			do State.learn_secret("clara")
 			=> end_d
 		
 		- That would be great. Could you show me where I can suck someone's blood?

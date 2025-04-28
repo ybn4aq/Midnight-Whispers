@@ -30,6 +30,7 @@ if State.bjorn_convo_lock == 0:
 				Bjorn: It is not always easy, but you have to stay sharp in the mind. Look at Elphie, she sadly lost site of that and now thinks she has powers. Me thinks the frost got to her mind.
 				set State.bjorn_convo_lock = 2
 				set State.bjorn_secret_known = true
+				do State.learn_secret("bjorn")
 				=> end_d
 			- Yes of course, the arctic is normally 40 degrees on a chilly day. We're not in Greenland! Your ship crashed.
 				Godfrey: Yes of course, the arctic is normally 40 degrees on a chilly day. We're not in Greenland! Your ship crashed.

@@ -30,6 +30,7 @@ if State.julie_convo_lock == 0:
 				Julie: YES! I am afraid of being alone. Is that so bad?  I see that redheaded loner Ron all the time and think to myself "that will be me." I mean, I am not even sure that anyone would NOTICE if Ron just dissapeared one day! How scary is that!?
 				set State.julie_convo_lock = 2
 				set State.julie_secret_known = true
+				do State.learn_secret("julie")
 				=> end_d
 			- Ben and Rachel, sitting in a tree. K-I-S-S-I-N-G. Boohoo. Grow up. Life isn't fair.
 				Godfrey: Ben and Rachel, sitting in a tree. K-I-S-S-I-N-G. Boohoo. Grow up. Life isn't fair.

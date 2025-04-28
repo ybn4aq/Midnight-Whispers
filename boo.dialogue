@@ -36,6 +36,7 @@ if State.boo_convo_lock == 0:
 				Boo: NOOOOO. Don't tell them. I will stop stealing from them, I pinky promise. I only do it because of stupid Spike stealing from me, too!! All of the songs on his dumb punk rock label are taken from tunes I CREATE! Listen to his songs, you'll notice it!
 				set State.boo_convo_lock = 2
 				set State.boo_secret_known = true
+				do State.learn_secret("boo")
 				=> end_d
 elif State.boo_convo_lock == 1:
 	Boo: Erm, I'm remembering my mom said I shouldn't talk to strangers. Bye-bye!

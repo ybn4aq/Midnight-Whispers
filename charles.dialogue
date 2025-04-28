@@ -36,6 +36,7 @@ if State.charles_convo_lock == 0:
 				Charles: Hey, at least I don't think we're in Greenland like... oh wait no I shouldn't say it. But it's too funny... Bjorn thinks his ship finally made it to Greenland, but it actually crashed here along the way. Who would think this place is Greenland?? Nothing is green here, its all purple.
 				set State.charles_convo_lock = 2
 				set State.charles_secret_known = true
+				do State.learn_secret("charles")
 				=> end_d
 elif State.charles_convo_lock == 1:
 	Charles: Scram! I'll be just fine without you.

@@ -1,6 +1,13 @@
 extends Node
+signal secret_learned(character)
 
 var in_dialogue = false
+
+func _process(delta: float) -> void:
+	pass
+
+func learn_secret(character):
+	secret_learned.emit(character)
 
 #Chain Locks
 var chain_lock1 = false
@@ -45,6 +52,7 @@ var franklin_convo_lock = 0
 var franklin_secret_known = false
 var met_franklin = false
 
+	
 #Eugene
 var eugene_convo_lock = 0
 var eugene_secret_known = false
