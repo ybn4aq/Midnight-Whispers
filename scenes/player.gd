@@ -138,6 +138,8 @@ func _play_animation_if_needed(name: String):
 		_animated_sprite.play(name)
 
 func _physics_process(delta: float) -> void:
+	if State.in_dialogue:
+		velocity = Vector2.ZERO
 	if show_menu:
 		velocity = Vector2.ZERO
 	read_input()
