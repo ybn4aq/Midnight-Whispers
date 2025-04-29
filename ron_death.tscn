@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfr436sv7dohg"]
+
+[ext_resource type="Texture2D" uid="uid://d3nn1vpjodecr" path="res://scenes/Ron death-03.png" id="1_14ewi"]
+
+[node name="ron_death" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.282627, 0.282002)
+texture = ExtResource("1_14ewi")

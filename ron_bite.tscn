@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://coku8jaj6lhag"]
+
+[ext_resource type="Script" uid="uid://dbfhry7748qbm" path="res://ron_bite.gd" id="1_ejxdb"]
+[ext_resource type="Texture2D" uid="uid://blvvi66iptdvb" path="res://scenes/Godfrey biting Ron.png" id="1_wa6a7"]
+
+[node name="ron_bite" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wa6a7")
+script = ExtResource("1_ejxdb")

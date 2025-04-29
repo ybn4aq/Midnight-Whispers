@@ -35,8 +35,7 @@ if State.elphie_convo_lock == 0:
 				Godfrey: I understand. I want to learn from the master. Can we go somewhere where we can practice our magic?
 				Elphie: I knew I would find someone to pass on my knowledge to! Let's go!
 				set State.game_won_elphie = true
-				set State.elphie_convo_lock = 3
-				# ^ Implement game won stuff, elphie convo lock won't be necessary then
+				do State.switch_elphie()
 				=> end_d
 			
 elif State.elphie_convo_lock == 1:
@@ -44,9 +43,6 @@ elif State.elphie_convo_lock == 1:
 	=> end_d
 elif State.elphie_convo_lock == 2:
 	Elphie: You're just jealous.
-	=> end_d
-elif State.elphie_convo_lock == 3:
-	Elphie: I knew I would find someone to pass on my knowledge to! Let's go!
 	=> end_d
 ~ end_d
 set State.in_dialogue = false

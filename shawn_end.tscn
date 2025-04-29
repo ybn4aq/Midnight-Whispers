@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ouw4e1oehg38"]
+
+[ext_resource type="Script" uid="uid://5gk3who7l72q" path="res://shawn_end.gd" id="1_b0x2d"]
+[ext_resource type="VideoStream" uid="uid://cww6q8gukp7ak" path="res://Shawn_No_Name_Trimmed.ogv" id="2_xc3yv"]
+[ext_resource type="Texture2D" uid="uid://csmt5og5t61dt" path="res://Time_Cover.png" id="3_28vua"]
+
+[node name="shawn_end" type="Node"]
+script = ExtResource("1_b0x2d")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 1792.0
+offset_bottom = 1200.0
+stream = ExtResource("2_xc3yv")
+volume_db = -80.0
+autoplay = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1638, 65)
+texture = ExtResource("3_28vua")
