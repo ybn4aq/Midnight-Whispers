@@ -26,7 +26,6 @@ script = ExtResource("1_prcoc")
 [node name="PressZ" type="Sprite2D" parent="."]
 top_level = true
 position = Vector2(1742, 669)
-scale = Vector2(1, 1)
 texture = ExtResource("2_k4ltf")
 
 [node name="FlashingLabel" type="TextureRect" parent="."]
