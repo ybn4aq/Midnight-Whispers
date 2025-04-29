@@ -284,7 +284,7 @@ scale = Vector2(0.7, 0.7)
 text = "12:00 AM"
 
 [node name="Timer" type="Timer" parent="TimeLabel"]
-wait_time = 18.0
+wait_time = 25.0
 autostart = true
 
 [node name="ClockSound" type="AudioStreamPlayer2D" parent="."]

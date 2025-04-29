@@ -177,11 +177,12 @@ func _on_timer_timeout() -> void:
 	else:
 		if not is_game_over:
 			time_label.text = str(time_values[time_value_idx])
-		timer.start(18)
+		timer.start(25)
 		
 
 func game_over():
-	get_tree().get_first_node_in_group("dialogue_balloon").hide()
+	if get_tree().get_first_node_in_group("dialogue_balloon") != null:
+		get_tree().get_first_node_in_group("dialogue_balloon").hide()
 	State.in_dialogue = true
 	_update_idle_animation()
 	background_music.stop()
