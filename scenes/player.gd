@@ -20,13 +20,16 @@ var direction := Vector2.ZERO
 @onready var spike_secret = $SecretMenu/SpikeSecret
 @onready var time_label = $TimeLabel
 @onready var timer = $TimeLabel/Timer
+@onready var clock_sound = $ClockSound
+@onready var background_music = $"Background Music"
+var is_game_over = false
 var time_values = [
   "12:00 AM", "12:10 AM", "12:20 AM", "12:30 AM", "12:40 AM", "12:50 AM",
   "1:00 AM", "1:10 AM", "1:20 AM", "1:30 AM", "1:40 AM", "1:50 AM",
   "2:00 AM", "2:10 AM", "2:20 AM", "2:30 AM", "2:40 AM", "2:50 AM",
   "3:00 AM", "3:10 AM", "3:20 AM", "3:30 AM", "3:40 AM", "3:50 AM",
   "4:00 AM", "4:10 AM", "4:20 AM", "4:30 AM", "4:40 AM", "4:50 AM",
-  "5:00 AM", "5:10 AM", "5:20 AM", "5:30 AM", "5:40 AM", "5:50 AM"]
+  "5:00 AM", "5:10 AM", "5:20 AM", "5:30 AM", "5:40 AM", "5:50 AM", "6:00 AM"]
 var time_value_idx = 0
 var timer_countdown: float
 
@@ -34,6 +37,7 @@ var timer_countdown: float
 var show_menu = false
 
 func _ready():
+	State.refresh()
 	secret_menu.visible = show_menu
 	add_to_group("player")
 	franklin_secret.text = str("?????")
@@ -138,6 +142,8 @@ func _play_animation_if_needed(name: String):
 		_animated_sprite.play(name)
 
 func _physics_process(delta: float) -> void:
+	if State.in_dialogue:
+		velocity = Vector2.ZERO
 	if show_menu:
 		velocity = Vector2.ZERO
 	read_input()
@@ -150,23 +156,34 @@ func update_actionable_finder_position():
 
 
 func _unhandled_input(_event: InputEvent) -> void:
-	if Input.is_action_just_pressed("accept"):
+	if Input.is_action_just_pressed("accept") and not State.in_dialogue:
 		var actionables = actionable_finder.get_overlapping_areas()
 		if actionables.size() > 0:
 			if actionables[0].has_method("action"):
 				actionables[0].action(direction)
 				State.in_dialogue = true
 				_update_idle_animation()
+	# elif Input.is_action_just_pressed("debug"):
+		#game_over()
 
 
 func _on_timer_timeout() -> void:
 	time_value_idx += 1
-	if time_value_idx >= 36:
+	if time_value_idx >= 36 and not is_game_over:
+		time_label.text = str("6:00 AM")
+		is_game_over = true
 		game_over()
 	else:
-		time_label.text = str(time_values[time_value_idx])
+		if not is_game_over:
+			time_label.text = str(time_values[time_value_idx])
 		timer.start(18)
 		
 
 func game_over():
-	pass
+	get_tree().get_first_node_in_group("dialogue_balloon").hide()
+	State.in_dialogue = true
+	_update_idle_animation()
+	background_music.stop()
+	clock_sound.play(7.22)
+	await get_tree().create_timer(10.5).timeout
+	get_tree().change_scene_to_file("res://scenes/game_over.tscn")

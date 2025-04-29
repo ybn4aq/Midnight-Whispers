@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://duygvn2qcagk6"
+path="res://.godot/imported/Dracula Castle.mp3-7884df324a70af36b24adfd2293d6eaa.mp3str"
+
+[deps]
+
+source_file="res://assets/Dracula Castle.mp3"
+dest_files=["res://.godot/imported/Dracula Castle.mp3-7884df324a70af36b24adfd2293d6eaa.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

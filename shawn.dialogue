@@ -22,7 +22,7 @@ if State.shawn_convo_lock == 0:
 			set State.shawn_convo_lock = 2
 			set State.chain_lock3 = true
 			=> end_d
-		- So just like that, you're going to leave town? Without even telling your twin brother? That is seriously messed up. [if State.chain_lock3 == false]
+		- So just like that, you're going to leave town... That is seriously messed up. [if State.chain_lock3 == false]
 			Godfrey: So just like that, you're going to leave town? Without even telling your twin brother? That is seriously messed up.
 			Shawn: What? How did you hear that? And shush up! Sean is right there! We can't talk about this here.
 			- You're evil. More evil than me. And I am the vampire.
@@ -31,7 +31,7 @@ if State.shawn_convo_lock == 0:
 				set State.shawn_convo_lock = 1
 				set State.chain_lock3 = true
 				=> end_d
-			- Fine. You want to talk somewhere private? So I can hear all about your big plans and the way you are going to betray your family? Let's do it.
+			- Fine. You want to talk somewhere private? So I can hear all about your big plans...
 				Godfrey: Fine. You want to talk somewhere private? So I can hear all about your big plans and the way you are going to betray your family? Let's do it.
 				Shawn: Alright, man, alright. But let me tell you this first, I am doing this FOR my family. I want to become successful as a drummer to support them and make them proud. They will understand, once I'm gone. Now let's go. I don't want Sean to hear us.
 				set State.game_won_shawn = true

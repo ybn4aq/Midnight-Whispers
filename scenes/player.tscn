@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://c5ynwievrvbqp"]
+[gd_scene load_steps=17 format=3 uid="uid://c5ynwievrvbqp"]
 
 [ext_resource type="Script" uid="uid://hmyf2ah26xqb" path="res://scenes/player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://cvv0bm6wqjo73" path="res://assets/Master Sprite Sheet.png" id="2_g2els"]
 [ext_resource type="Texture2D" uid="uid://pgmgylol67xi" path="res://assets/MenuPullup.png" id="3_qhqgy"]
+[ext_resource type="AudioStream" uid="uid://b8uehe60b7a5u" path="res://assets/old-clock-chimes-74624.mp3" id="4_dqkch"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fdfoy"]
 atlas = ExtResource("2_g2els")
@@ -285,5 +286,9 @@ text = "12:00 AM"
 [node name="Timer" type="Timer" parent="TimeLabel"]
 wait_time = 18.0
 autostart = true
+
+[node name="ClockSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_dqkch")
+volume_db = 3.0
 
 [connection signal="timeout" from="TimeLabel/Timer" to="." method="_on_timer_timeout"]

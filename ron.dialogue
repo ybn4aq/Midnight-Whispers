@@ -31,7 +31,7 @@ if State.ron_convo_lock == 0:
 				set State.ron_convo_lock = 1
 				set State.chain_lock1 = true
 				=> end_d
-			- Yes, Ron. I will be your friend. Want to come with me now? I have this really cool hang out spot for just the two of us.
+			- I will be your friend. Want to come with me now? I have this really cool hang out spot...
 				Godfrey: Yes, Ron. I will be your friend. Want to come with me now? I have this really cool hang out spot for just the two of us.
 				Ron: Yeah! That sounds fun. Yay! My first "hang out". I'm going to be like all the other kids!
 				set State.game_won_ron = true

@@ -31,8 +31,8 @@ if State.elphie_convo_lock == 0:
 				set State.elphie_convo_lock = 1
 				set State.chain_lock2 = true
 				=> end_d
-			- I understand. I want to learn from the master. Can we go somewhere where we can practice our magic?
-				Godfrey: I understand. I want to learn from the master. Can we go somewhere where we can practice our magic?
+			- I want to learn from the master. Can we go somewhere where we can practice our magic?
+				Godfrey: I understand. I want to learn from the master. Can we go somewhere where we can practice magic?
 				Elphie: I knew I would find someone to pass on my knowledge to! Let's go!
 				set State.game_won_elphie = true
 				set State.elphie_convo_lock = 3
