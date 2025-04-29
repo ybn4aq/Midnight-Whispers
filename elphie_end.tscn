@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgai8ugv4l7on"]
+[gd_scene load_steps=4 format=3 uid="uid://cw4t8mfy37n1k"]
 
 [ext_resource type="Script" uid="uid://dbekk8seouvic" path="res://elphie_end.gd" id="1_m2x8t"]
-[ext_resource type="VideoStream" uid="uid://caqi1qkp032cx" path="res://Elphie_No_Name_Trimmed.ogv" id="2_afghn"]
+[ext_resource type="VideoStream" path="res://Elphie_No_Name_Trimmed.ogv" id="2_afghn"]
 [ext_resource type="Texture2D" uid="uid://csmt5og5t61dt" path="res://Time_Cover.png" id="3_nn3y5"]
 
 [node name="elphie_end" type="Node"]

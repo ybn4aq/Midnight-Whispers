@@ -37,6 +37,7 @@ var timer_countdown: float
 var show_menu = false
 
 func _ready():
+	WinMusic.stop()
 	State.refresh()
 	secret_menu.visible = show_menu
 	add_to_group("player")

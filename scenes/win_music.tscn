@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://gprmhf5xuyrw"]
+
+[ext_resource type="AudioStream" uid="uid://duygvn2qcagk6" path="res://assets/Dracula Castle.mp3" id="1_eattx"]
+
+[node name="WinMusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_eattx")
+volume_db = 10.0

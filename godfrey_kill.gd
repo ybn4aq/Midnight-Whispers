@@ -2,14 +2,13 @@ extends TextureRect
 
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	if State.game_won_elphie:
-		switch_scene_after_delay_elphie(1)
+		switch_scene_after_delay_elphie(3)
 	elif State.game_won_ron:
-		switch_scene_after_delay_ron(1)
+		switch_scene_after_delay_ron(3)
 	elif State.game_won_shawn:
-		switch_scene_after_delay_shawn(1)
+		switch_scene_after_delay_shawn(3)
 
 
 func switch_scene_after_delay_elphie(time_seconds):

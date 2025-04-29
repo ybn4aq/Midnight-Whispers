@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://qk3r6vxdti34"]
+[gd_scene load_steps=5 format=3 uid="uid://cxbwgj1smtb3r"]
 
 [ext_resource type="Texture2D" uid="uid://b446hpdxqlj1u" path="res://scenes/Elfie death-03.png" id="1_iji1u"]
+[ext_resource type="Texture2D" uid="uid://d1245hqf13yiq" path="res://assets/PRESSAGAIN.png" id="2_gm314"]
+[ext_resource type="Script" uid="uid://dl2waxrpn8d8a" path="res://elphie_death.gd" id="2_wsidm"]
+[ext_resource type="Texture2D" uid="uid://b5fxtwg2yjpx4" path="res://assets/loading-04.png" id="4_e6e81"]
 
 [node name="Elphie_death" type="TextureRect"]
 anchors_preset = 15
@@ -14,3 +17,17 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.284821, 0.282142)
 texture = ExtResource("1_iji1u")
+script = ExtResource("2_wsidm")
+
+[node name="LoadingScreen" type="TextureRect" parent="."]
+offset_left = 186.0
+offset_top = 18.0
+offset_right = 29537.0
+offset_bottom = 14884.0
+scale = Vector2(0.210292, 0.286099)
+texture = ExtResource("4_e6e81")
+
+[node name="PressZ" type="Sprite2D" parent="."]
+position = Vector2(3184.46, 4022.8)
+scale = Vector2(6.63414, 4.95457)
+texture = ExtResource("2_gm314")

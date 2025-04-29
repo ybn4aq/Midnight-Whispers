@@ -1,9 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfr436sv7dohg"]
+[gd_scene load_steps=5 format=3 uid="uid://db0ih1pbfo0yw"]
 
 [ext_resource type="Texture2D" uid="uid://d3nn1vpjodecr" path="res://scenes/Ron death-03.png" id="1_14ewi"]
+[ext_resource type="Script" uid="uid://cfawq7ls14610" path="res://ron_death.gd" id="2_ukbfh"]
+[ext_resource type="Texture2D" uid="uid://b5fxtwg2yjpx4" path="res://assets/loading-04.png" id="3_j8hld"]
+[ext_resource type="Texture2D" uid="uid://d1245hqf13yiq" path="res://assets/PRESSAGAIN.png" id="4_nmwh1"]
 
 [node name="ron_death" type="TextureRect"]
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.282627, 0.282002)
 texture = ExtResource("1_14ewi")
+script = ExtResource("2_ukbfh")
+
+[node name="LoadingScreen" type="TextureRect" parent="."]
+offset_left = 186.0
+offset_top = 18.0
+offset_right = 29537.0
+offset_bottom = 14884.0
+scale = Vector2(0.210292, 0.286099)
+texture = ExtResource("3_j8hld")
+
+[node name="PressZ" type="Sprite2D" parent="."]
+position = Vector2(3184.46, 4022.8)
+scale = Vector2(6.63414, 4.95457)
+texture = ExtResource("4_nmwh1")

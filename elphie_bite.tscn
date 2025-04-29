@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://m4gsmj646y1q"]
+[gd_scene load_steps=3 format=3 uid="uid://jo8slh6afhxo"]
 
 [ext_resource type="Texture2D" uid="uid://cj8owycyol4vs" path="res://scenes/Godfrey biting elphie.png" id="1_owiub"]
 [ext_resource type="Script" uid="uid://1uxgaxh1502w" path="res://elphie_bite.gd" id="2_sbant"]

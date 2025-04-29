@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://coku8jaj6lhag"]
+[gd_scene load_steps=3 format=3 uid="uid://nkfo5tsdddpa"]
 
 [ext_resource type="Script" uid="uid://dbfhry7748qbm" path="res://ron_bite.gd" id="1_ejxdb"]
 [ext_resource type="Texture2D" uid="uid://blvvi66iptdvb" path="res://scenes/Godfrey biting Ron.png" id="1_wa6a7"]

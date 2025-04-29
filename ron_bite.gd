@@ -1,7 +1,7 @@
 extends TextureRect
 
 func _ready():
-	switch_scene_after_delay(1)
+	switch_scene_after_delay(2.5)
 
 func switch_scene_after_delay(time_seconds):
 	await get_tree().create_timer(time_seconds).timeout

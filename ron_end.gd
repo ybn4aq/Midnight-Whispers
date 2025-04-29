@@ -4,6 +4,7 @@ extends Node
 
 func _ready():
 	video_player.play()
+	WinMusic.play()
 	switch_scene_after_delay(13.5)
 
 func switch_scene_after_delay(time_seconds):

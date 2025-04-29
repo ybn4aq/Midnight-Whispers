@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://m3ueedyx1hjy"]
+[gd_scene load_steps=3 format=3 uid="uid://b8qnmaxej0v01"]
 
 [ext_resource type="Texture2D" uid="uid://b47vygtis352y" path="res://godfrey new kill.png" id="1_omxrt"]
 [ext_resource type="Script" uid="uid://bie564mg4tknh" path="res://godfrey_kill.gd" id="2_omxrt"]
