@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dlsfnopbxo2p7"]
 
 [ext_resource type="Script" uid="uid://b5fjhyxhitsad" path="res://title_screen.gd" id="1_fgkus"]
-[ext_resource type="Texture2D" uid="uid://srr6jagd2hsv" path="res://assets/Midnight_Whispers_title_2.png" id="2_sa3yf"]
+[ext_resource type="Texture2D" uid="uid://c8dk1prd3lkc3" path="res://new title page.png" id="2_sa3yf"]
 
 [node name="Title Screen" type="Control"]
 layout_mode = 3

@@ -24,8 +24,8 @@ func _ready():
 	loading_screen.visible = false
 	press_z.visible = false
 	
-	texture_a = preload("res://assets/Midnight_Whispers_title.png")
-	texture_b = preload("res://assets/Midnight_Whispers_title_2.png")
+	texture_a = preload("res://new title page.png")
+	texture_b = preload("res://scenes/new title page copy.png")
 	texture_c = preload("res://assets/midnight_whispers_exposition-1.png")
 	texture_d = preload("res://assets/midnight_whispers_exposition-2.png")
 	texture_e = preload("res://assets/midnight_whispers_exposition-3.png")

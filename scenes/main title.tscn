@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://cm1n0e6e7ewdw"]
 
 [ext_resource type="Script" uid="uid://b0iqdecjt22c" path="res://scenes/title_animation.gd" id="1_prcoc"]
-[ext_resource type="Texture2D" uid="uid://srr6jagd2hsv" path="res://assets/Midnight_Whispers_title_2.png" id="2_8mcxd"]
 [ext_resource type="Texture2D" uid="uid://bftr5aqafebtk" path="res://assets/pressz.png" id="2_k4ltf"]
 [ext_resource type="Texture2D" uid="uid://ne3vb73taubl" path="res://assets/midnight_whispers_exposition-1.png" id="3_8mcxd"]
+[ext_resource type="Texture2D" uid="uid://c8dk1prd3lkc3" path="res://new title page.png" id="3_k4ltf"]
 [ext_resource type="Texture2D" uid="uid://d2uxajfcj2fep" path="res://assets/Controls.png" id="4_ko4j1"]
 [ext_resource type="Texture2D" uid="uid://b5fxtwg2yjpx4" path="res://assets/loading-04.png" id="5_gqn6y"]
 
@@ -35,7 +35,7 @@ offset_top = -142.796
 offset_right = 815.018
 offset_bottom = 881.199
 scale = Vector2(1.39788, 1.27565)
-texture = ExtResource("2_8mcxd")
+texture = ExtResource("3_k4ltf")
 
 [node name="FlashTimer" type="Timer" parent="."]
 wait_time = 0.5
