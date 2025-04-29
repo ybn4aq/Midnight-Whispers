@@ -3,8 +3,62 @@ signal secret_learned(character)
 
 var in_dialogue = false
 
-func _process(delta: float) -> void:
-	pass
+func refresh():
+	in_dialogue = false
+	chain_lock1 = false
+	chain_lock2 = false
+	chain_lock3 = false
+	game_won_ron = false
+	game_won_elphie = false
+	game_won_shawn = false
+	sean_convo_lock = 0
+	sean_secret_known = false
+	met_sean = false
+	rachel_convo_lock = 0
+	rachel_secret_known = false
+	met_rachel = false
+	ben_convo_lock = 0
+	ben_secret_known = false
+	met_ben = false
+	julie_convo_lock = 0
+	julie_secret_known = false
+	met_julie = false
+	ron_convo_lock = 0
+	ron_secret_known = false
+	met_ron = false
+	franklin_convo_lock = 0
+	franklin_secret_known = false
+	met_franklin = false
+	eugene_convo_lock = 0
+	eugene_secret_known = false
+	met_eugene = false
+	charles_convo_lock = 0
+	charles_secret_known = false
+	met_charles = false
+	bjorn_convo_lock = 0
+	bjorn_secret_known = false
+	met_bjorn = false
+	elphie_convo_lock = 0
+	elphie_secret_known = false
+	met_elphie = false
+	clara_convo_lock = 0
+	clara_secret_known = false
+	met_clara = false
+	boo_convo_lock = 0
+	boo_secret_known = false
+	met_boo = false
+	spike_convo_lock = 0
+	spike_secret_known = false
+	met_spike = false
+	greg_convo_lock = 0
+	greg_secret_known = false
+	met_greg = false
+	shawn_convo_lock = 0
+	shawn_secret_known = false
+	met_shawn = false
+	met_oogle = false
+	met_jean = false
+
 
 func learn_secret(character):
 	secret_learned.emit(character)

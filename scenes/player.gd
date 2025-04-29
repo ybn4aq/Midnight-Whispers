@@ -22,6 +22,7 @@ var direction := Vector2.ZERO
 @onready var timer = $TimeLabel/Timer
 @onready var clock_sound = $ClockSound
 @onready var background_music = $"Background Music"
+var is_game_over = false
 var time_values = [
   "12:00 AM", "12:10 AM", "12:20 AM", "12:30 AM", "12:40 AM", "12:50 AM",
   "1:00 AM", "1:10 AM", "1:20 AM", "1:30 AM", "1:40 AM", "1:50 AM",
@@ -36,6 +37,7 @@ var timer_countdown: float
 var show_menu = false
 
 func _ready():
+	State.refresh()
 	secret_menu.visible = show_menu
 	add_to_group("player")
 	franklin_secret.text = str("?????")
@@ -161,21 +163,24 @@ func _unhandled_input(_event: InputEvent) -> void:
 				actionables[0].action(direction)
 				State.in_dialogue = true
 				_update_idle_animation()
-	#elif Input.is_action_just_pressed("debug"):
+	# elif Input.is_action_just_pressed("debug"):
 		#game_over()
 
 
 func _on_timer_timeout() -> void:
 	time_value_idx += 1
-	if time_value_idx >= 36:
-		time_label.text = str(time_values[time_value_idx])
+	if time_value_idx >= 36 and not is_game_over:
+		time_label.text = str("6:00 AM")
+		is_game_over = true
 		game_over()
 	else:
-		time_label.text = str(time_values[time_value_idx])
+		if not is_game_over:
+			time_label.text = str(time_values[time_value_idx])
 		timer.start(18)
 		
 
 func game_over():
+	get_tree().get_first_node_in_group("dialogue_balloon").hide()
 	State.in_dialogue = true
 	_update_idle_animation()
 	background_music.stop()
