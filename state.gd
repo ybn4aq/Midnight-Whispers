@@ -63,6 +63,15 @@ func refresh():
 func learn_secret(character):
 	secret_learned.emit(character)
 
+func switch_ron():
+	get_tree().change_scene_to_file("res://ron_end.tscn")
+
+func switch_shawn():
+	get_tree().change_scene_to_file("res://shawn_end.tscn")
+
+func switch_elphie():
+	get_tree().change_scene_to_file("res://elphie_end.tscn")
+
 #Chain Locks
 var chain_lock1 = false
 var chain_lock2 = false

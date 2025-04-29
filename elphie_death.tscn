@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://qk3r6vxdti34"]
+
+[ext_resource type="Texture2D" uid="uid://b446hpdxqlj1u" path="res://scenes/Elfie death-03.png" id="1_iji1u"]
+
+[node name="Elphie_death" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.99999
+offset_top = -4.0
+offset_right = 4598.0
+offset_bottom = 3063.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.284821, 0.282142)
+texture = ExtResource("1_iji1u")

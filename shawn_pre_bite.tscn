@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ds6yrwdi47fho"]
+
+[ext_resource type="Texture2D" uid="uid://cn8hovd6yc0xp" path="res://scenes/godfrey ab to bite shawn.png" id="1_ydr8r"]
+[ext_resource type="Script" uid="uid://b0wqn8n8l33lp" path="res://shawn_pre_bite.gd" id="2_4w61v"]
+
+[node name="shawn_pre_bite" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ydr8r")
+script = ExtResource("2_4w61v")

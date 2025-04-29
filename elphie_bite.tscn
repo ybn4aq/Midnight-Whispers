@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://m4gsmj646y1q"]
+
+[ext_resource type="Texture2D" uid="uid://cj8owycyol4vs" path="res://scenes/Godfrey biting elphie.png" id="1_owiub"]
+[ext_resource type="Script" uid="uid://1uxgaxh1502w" path="res://elphie_bite.gd" id="2_sbant"]
+
+[node name="elphie_bite" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_owiub")
+script = ExtResource("2_sbant")

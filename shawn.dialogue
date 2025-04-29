@@ -35,8 +35,7 @@ if State.shawn_convo_lock == 0:
 				Godfrey: Fine. You want to talk somewhere private? So I can hear all about your big plans and the way you are going to betray your family? Let's do it.
 				Shawn: Alright, man, alright. But let me tell you this first, I am doing this FOR my family. I want to become successful as a drummer to support them and make them proud. They will understand, once I'm gone. Now let's go. I don't want Sean to hear us.
 				set State.game_won_shawn = true
-				set State.shawn_convo_lock = 3
-				# ^ Implement game won stuff, shawn convo lock won't be necessary then
+				do State.switch_shawn()
 				=> end_d
 			
 elif State.shawn_convo_lock == 1:
@@ -44,9 +43,6 @@ elif State.shawn_convo_lock == 1:
 	=> end_d
 elif State.shawn_convo_lock == 2:
 	Shawn: Aw. That wasn't very nice. Feelings, hurt.
-	=> end_d
-elif State.shawn_convo_lock == 3:
-	Shawn: Alright, man, alright. But let me tell you this first, I am doing this FOR my family. I want to become successful as a drummer to support them and make them proud. They will understand, once I'm gone. Now let's go. I don't want Sean to hear us.
 	=> end_d
 ~ end_d
 set State.in_dialogue = false

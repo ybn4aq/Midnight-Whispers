@@ -35,8 +35,7 @@ if State.ron_convo_lock == 0:
 				Godfrey: Yes, Ron. I will be your friend. Want to come with me now? I have this really cool hang out spot for just the two of us.
 				Ron: Yeah! That sounds fun. Yay! My first "hang out". I'm going to be like all the other kids!
 				set State.game_won_ron = true
-				set State.ron_convo_lock = 3
-				# ^ Implement game won stuff, ron convo lock won't be necessary then
+				do State.switch_ron()
 				=> end_d
 			
 elif State.ron_convo_lock == 1:
@@ -44,9 +43,6 @@ elif State.ron_convo_lock == 1:
 	=> end_d
 elif State.ron_convo_lock == 2:
 	Ron: You can't bring me down! I am on top of the world!
-	=> end_d
-elif State.ron_convo_lock == 3:
-	Ron: Yeah! That sounds fun. Yay! My first "hang out". I'm going to be like all the other kids!
 	=> end_d
 ~ end_d
 set State.in_dialogue = false
